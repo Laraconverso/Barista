@@ -1,7 +1,7 @@
 function go(){
     let str = document.getElementById("t1").value;
     let vocal = "aeiouAEIOU";
-    let consonante = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ ";
+    let consonante = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
     let ctrV = 0;
     let ctrC = 0;
 
