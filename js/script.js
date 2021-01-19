@@ -4,7 +4,6 @@ function go(){
     let consonante = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ";
     let ctrV = 0;
     let ctrC = 0;
-
     for(let x = 0; x < str.length; x++){
         for(let y = 0; y < vocal.length; y++){
             if(str[x] ==vocal[y])
