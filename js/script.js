@@ -1,4 +1,7 @@
 //Carrito
+let cart =[];
+let quantity = 0;
+
 function Item(product, price) {
     this.product = product;
     this.price = price;
@@ -12,5 +15,3 @@ function Item(product, price) {
 console.log(product1.buy()); 
 console.log(product2.buy());
 console.log(product3.buy());
-
-    
