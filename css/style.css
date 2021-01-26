@@ -1,9 +1,3 @@
-#bton {
-  background: #47be47;
-  color: black;
-  border-radius: 1000px;
-  border-color: #83d483; }
-
 * {
   padding: 0;
   margin: 0;
@@ -180,10 +174,10 @@ body.dark .grid .card {
   transition: .3s ease all; }
 
 .grid .card .botones .boton.primario {
-  background: #3E60E9; }
+  background: #18b40a; }
 
 .grid .card .botones .boton.primario:hover {
-  background: #254BE6; }
+  background: #5ae239; }
 
 .grid .card .botones .boton.secundario {
   background: #C8C8C8; }
@@ -211,5 +205,10 @@ body.dark .grid .card {
   display: grid;
   -ms-grid-columns: 50% 50%;
   grid-template-columns: 50% 50%; }
+
+#copyright {
+  margin: 20%;
+  display: -ms-grid;
+  display: grid; }
 
 /*# sourceMappingURL=style.css.map */
