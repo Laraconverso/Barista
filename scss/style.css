@@ -22,11 +22,8 @@ a {
   font-weight: 500;
 }
 
-.container {
-  max-width: 1000px;
-  width: 90%;
-  margin: auto;
-  padding: 50px 0;
+#body {
+  margin: 5%;
 }
 
 nav {
@@ -228,12 +225,5 @@ body.dark .grid .card {
   #icon {
     width: 3.5%;
   }
-}
-
-#footer {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 50% 50%;
-      grid-template-columns: 50% 50%;
 }
 /*# sourceMappingURL=style.css.map */

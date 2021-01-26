@@ -15,11 +15,8 @@ a {
   text-decoration: none;
   font-weight: 500; }
 
-.container {
-  max-width: 1000px;
-  width: 90%;
-  margin: auto;
-  padding: 50px 0; }
+#body {
+  margin: 5%; }
 
 nav {
   background: white;
@@ -151,7 +148,3 @@ nav {
   @media (min-width: 780px) {
     #icon {
       width: 3.5%; } }
-
-#footer {
-  display: grid;
-  grid-template-columns: 50% 50%; }
