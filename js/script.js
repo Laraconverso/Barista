@@ -24,5 +24,3 @@ function Item(num,product, price) {
         alert("No hay mas stock");
     }
 }
-
-
