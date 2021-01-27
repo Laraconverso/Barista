@@ -45,7 +45,7 @@ nav {
       nav .enlaces a:hover {
         color: #707070; }
 
-/*.switch{
+/*.switch {
 	background:orange;
 	border-radius: 1000px;
 	border: none;
@@ -84,7 +84,7 @@ nav {
 		background: none;
 		color: $blanco;
 	}
-}*/
+} */
 .grid {
   display: grid;
   grid-gap: 40px 20px;

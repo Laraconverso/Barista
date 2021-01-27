@@ -81,7 +81,7 @@ nav .enlaces a:hover {
   color: #707070;
 }
 
-/*.switch{
+/*.switch {
 	background:orange;
 	border-radius: 1000px;
 	border: none;
@@ -120,7 +120,7 @@ nav .enlaces a:hover {
 		background: none;
 		color: $blanco;
 	}
-}*/
+} */
 .grid {
   display: -ms-grid;
   display: grid;
