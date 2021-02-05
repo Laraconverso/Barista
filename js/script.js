@@ -12,14 +12,6 @@ function Item(num, product, price) {
   let product2 = new Item(1, "Shangai Blend", "$1000");
   let product3 = new Item(2, "Colombian Blend","$1000");
 
-for (let index=0; index < quantity; index++) {
-  let element = new Item("Item Numero " + index);
-  myCart.push(product1);
-  myCart.push(product2);
-  myCart.push(product3);
-}
-//visualize
-console.log(myCart);
 //Add to cart
 function addToCart(num){
   if (quantity > 10 ){
@@ -28,7 +20,7 @@ function addToCart(num){
       //visualize
       console.log(`Se ha agregado ${quantity} a su carrito.`);
   } else {
-      alert("No hay mas stock");
+      console.log("No hay mas stock");
   }
 }
 
@@ -43,10 +35,9 @@ for (let index = 0; index < buttonBuyList.length; index++) {
 function buyItem(addItem) {
   let buttonBuy = addItem.target;
   buttonBuy.style.visivility = "hidden";
-  alert(`Agregaste un item a tu carrito`);
 }
 //Eliminating items from the cart
-let buttonCancelList = document.getElementsByClassName("buttonCancel");
+let buttonCancelList = document.getElementsByClassName("button cancel");
 
 for (let index = 0; index < buttonCancelList.length; index++) {
   let element = buttonCancelList[index];

@@ -23,10 +23,10 @@
                         <a href="#products" id="products">Carrito</a>
                         <a href="#envios" id="envios">Envíos</a>
                         <a href="#aboutus" id="aboutus">Nosotros</a>
-                       <!-- <button class="switch" id="switch">
+                        <button class="switch" id="switch">
                             <span><i class="fas fa-sun"></i></span>
                             <span><i class="fas fa-moon"></i></span>
-                        </button>-->
+                        </button>
                     </div>
                 </nav>
             </div> 
@@ -38,58 +38,41 @@
                 <h2 id="titulo">Barista</h2>
             </div>
              <!--PRODUCTS-->
-            <div id="products" class="grid">
+            <div id="products" class="container">
                 <div class="row">
-                    <div class="col-sm-4">
+                    <div class="col-4">
                         <div class="card" id="myList" >
-                            <img src="img/photoModel.png" alt="product">
+                            <img src="img/productModel.png" alt="product" id="productPic">
                             <div class="botones">
-                                <a href="#" class="buttonBuy">Comprar</a>
-                                <a href="#" class="boton secundario">Ver más</a>
+                                <button class="buttonBuy btn btn-success" onclick="addToCart(0)">Comprar</button>
+                                <button class="buttonCancel btn btn-success">Borrar</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-4">
                         <div class="card">
-                            <img src="img/productModel.png" alt="product">
+                            <img src="img/productModel.png" alt="product" id="productPic">
                             <div class="botones">
-                                <a href="#" class="buttonBuy">Comprar</a>
-                                <a href="#" class="boton secundario">Ver más</a>
+                                <button class="buttonBuy btn btn-success" onclick="addToCart(1)">Comprar</button>
+                                <button class="buttonCancel btn btn-success">Borrar</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-4">
                         <div class="card">
-                            <img src="img/photoModel.png" alt="product">
+                            <img src="img/productModel.png" alt="product" id="productPic">
                             <div class="botones">
-                                <a href="#" class="buttonBuy">Comprar</a>
-                                <a href="#" class="boton secundario">Ver más</a>
+                                <button class="buttonBuy btn btn-success" onclick="addToCart(2)">Comprar</button>
+                                <button class="buttonCancel btn btn-success">Borrar</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            <!--<div class="card">
-                    <img src="img/" alt="">
-                    <div class="botones">
-                        <a href="#" class="buttonBuy">Comprar</a>
-                        <a href="#" class="boton secundario">Ver más</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/" alt="">
-                    <div class="botones">
-                        <a href="#" class="buttonBuy">Comprar</a>
-                        <a href="#" class="boton secundario">Ver más</a>
-                    </div>
-                </div>
-                <div class="card">
-                    <img src="img/" alt="">
-                    <div class="botones">
-                        <a href="#" class="buttonBuy">Comprar</a>
-                        <a href="#" class="boton secundario">Ver más</a>
-                    </div>
-                </div>-->
             </div>
+             <!--CARRITO-->
+             <div>
+                <h4> </h4>
+             </div>
              <!--SHIPPING-->
             <div id="envios">
                 <h4><i class="fas fa-archive"></i> Envíos</h4>
@@ -107,9 +90,13 @@
         </section>
          <!--FOOTER-->
         <footer>
-            <div>
-                <div>
-                    <div>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h5>Barista</h5>
+                        <p>Buenos Aires, Argentina.</p>
+                    </div>
+                    <div class="col">
                         <h5>Contactanos</h5>
                         <div>
                             <a href="mailto:larets.20714@gmail.com" id="contacto"><img src="img/mail.png" alt="Mail" id="icon"></a>
@@ -118,15 +105,12 @@
                             <a href="https://twitter.com/" id="contacto"><img src="img/twitter.png" alt="Twitter" id="icon"></a>
                             <a href="https://www.tiktok.com/" id="contacto"><img src="img/tiktok.png" alt="Tiktok" id="icon"></a>
                         </div>
-                        <div>
-                            <h5>Barista</h5>
-                            <p>Buenos Aires, Argentina.</p>
-                        </div>
                     </div>
                 </div>
             </div>
         </footer>
         <script src="js/script.js"></script>
+        <script src="js/switch.js"></script>
     </body>
 </html> 
 <!--by LaraConverso>
