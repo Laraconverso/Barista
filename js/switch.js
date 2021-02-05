@@ -7,7 +7,7 @@ btnSwitch.addEventListener('click',() =>{
 if(document.body.classList.contains('dark')){
       localStorage.setItem('dark-mode', 'true');
   } else{
-      localStorage.setItem('dark-mode', 'true');
+      localStorage.setItem('dark-mode', 'false');
   }
 });
 //Obtenemos el modo actual.
