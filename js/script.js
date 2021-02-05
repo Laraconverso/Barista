@@ -14,11 +14,11 @@ function Item(num, product, price) {
 
 //Add to cart
 function addToCart(num){
-  if (quantity > 10 ){
+  if (quantity < 10 ){
       myCart.push(Item[num]);
       quantity = myCart.length;
       //visualize
-      console.log(`Se ha agregado ${quantity} a su carrito.`);
+      console.log(`Se ha agregado ${quantity} elementos a su carrito.`);
   } else {
       console.log("No hay mas stock");
   }
@@ -35,9 +35,10 @@ for (let index = 0; index < buttonBuyList.length; index++) {
 function buyItem(addItem) {
   let buttonBuy = addItem.target;
   buttonBuy.style.visivility = "hidden";
+  alert(`Se agrego un item a tu carrito.`)
 }
 //Eliminating items from the cart
-let buttonCancelList = document.getElementsByClassName("button cancel");
+let buttonCancelList = document.getElementsByClassName("buttonCancel");
 
 for (let index = 0; index < buttonCancelList.length; index++) {
   let element = buttonCancelList[index];

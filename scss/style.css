@@ -184,32 +184,40 @@ body.dark .grid .card {
       grid-template-columns: 1fr 1fr;
 }
 
-.grid .card .botones .button {
+.buttonBuy {
+  background-color: #18b40a;
+  margin: 10%;
   padding: 10px;
   color: #fff;
-  width: 100%;
-  display: block;
-  background: black;
+  width: 75%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
   text-align: center;
-  border-radius: 5px;
+  border-radius: 20px;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
 }
 
-.grid .card .botones .button.buy {
-  background: #18b40a;
-}
-
-.grid .card .botones .button.buy:hover {
+.buttonBuy:hover {
   background: #5ae239;
 }
 
-.grid .card .botones .button.cancel {
-  background: #C8C8C8;
-}
-
-.grid .card .botones .button.cancel:hover {
-  background: #ACABAB;
+.buttonCancel {
+  background-color: red;
+  margin: 10%;
+  padding: 10px;
+  color: #fff;
+  width: 75%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  text-align: center;
+  border-radius: 20px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
 }
 
 #icon {
