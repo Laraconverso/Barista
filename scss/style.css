@@ -248,13 +248,13 @@ body.dark .grid .card {
 
 @media (min-width: 430px) and (max-width: 780px) {
   #icon {
-    width: 4.5%;
+    width: 7.5%;
   }
 }
 
 @media (min-width: 780px) {
   #icon {
-    width: 3.5%;
+    width: 5.5%;
   }
 }
 /*# sourceMappingURL=style.css.map */
