@@ -59,6 +59,18 @@ a {
 #body{
     margin: 3%;
 }
+#titulo{
+	color: $negro;
+	.dark &{
+		color: $blanco;
+	}
+}
+#inf{
+	color: $negro;
+	.dark &{
+		color: $blanco;
+	}
+}
 //Header
 nav {
 	background: $blanco;

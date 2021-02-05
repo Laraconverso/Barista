@@ -18,6 +18,16 @@ a {
 #body {
   margin: 3%; }
 
+#titulo {
+  color: black; }
+  .dark #titulo {
+    color: white; }
+
+#inf {
+  color: black; }
+  .dark #inf {
+    color: white; }
+
 nav {
   background: white;
   display: flex;
