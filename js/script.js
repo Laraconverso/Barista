@@ -13,7 +13,7 @@ function Item(num, product, price) {
   let product3 = new Item(2, "Colombian Blend","$1000");
 
 for (let index=0; index < quantity; index++) {
-  const element = new Item("Item Numero " + index);
+  let element = new Item("Item Numero " + index);
   myCart.push(product1);
   myCart.push(product2);
   myCart.push(product3);
@@ -30,4 +30,31 @@ function addToCart(num){
   } else {
       alert("No hay mas stock");
   }
+}
+
+//Add items to the cart
+let buttonBuyList = document.getElementsByClassName("buttonBuy");
+
+for (let index = 0; index < buttonBuyList.length; index++) {
+  let element = buttonBuyList[index];
+  element.addEventListener("click", buyItem)
+}
+
+function buyItem(addItem) {
+  let buttonBuy = addItem.target;
+  buttonBuy.style.visivility = "hidden";
+  alert(`Agregaste un item a tu carrito`);
+}
+//Eliminating items from the cart
+let buttonCancelList = document.getElementsByClassName("buttonCancel");
+
+for (let index = 0; index < buttonCancelList.length; index++) {
+  let element = buttonCancelList[index];
+  element.addEventListener("click", cancelItem)
+}
+
+function cancelItem(eraseItem) {
+  let buttonCancel = eraseItem.target;
+  buttonCancel.style.visivility = "hidden";
+  alert("Eliminaste un item de tu carrito");
 }
