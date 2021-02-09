@@ -21,11 +21,9 @@ if(localStorage.getItem('dark-mode') === 'true'){
 
 /*
 TO DO LIST:
--Agregar descripcion del producto y precio
+-agregar descripcion del producto y precio
 -agregar seccion del carrito y visualizar la cuenta 
 -Agregar funcion que suma los precios 
--Agregar Json con el stock 
 -Agregar las fotos de los productos
--corregir seleccion del switch
 -agregar foto de bienvenida al sitio(+)
 */
