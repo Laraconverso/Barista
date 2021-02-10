@@ -1,3 +1,24 @@
+//Carrito
+let myCart =[];
+let quantity = 1;
+
+function Item(num, product, price) {
+    this.num = num;
+    this.product = product;
+    this.price = price;
+}
+
+//Add to cart
+function addToCart(num){
+  if (quantity < 10 ){
+      myCart.push(Item[num]);
+      quantity = myCart.length;
+      //visualize
+      console.log(`Se ha agregado ${quantity} elementos a su carrito.`);
+  } else {
+      console.log("No hay mas stock");
+  }
+}
 //Add items to the cart
 let buttonBuyList = document.getElementsByClassName("buttonBuy");
 
@@ -50,36 +71,22 @@ if(localStorage.getItem('dark-mode') === 'true'){
   btnSwitch.classList.remove('active');
 }
 
-
-
-
-
-
-/* COMMENT SECTION (old code)
- //Carrito
-let myCart =[];
-let quantity = 1;
-
-function Item(num, product, price) {
-    this.num = num;
-    this.product = product;
-    this.price = price;
-}
-
-//Add to cart
-function addToCart(num){
-  if (quantity < 10 ){
-      myCart.push(Item[num]);
-      quantity = myCart.length;
-      //visualize
-      console.log(`Se ha agregado ${quantity} elementos a su carrito.`);
-  } else {
-      console.log("No hay mas stock");
-  }
-}
 //Products
-  let product1 = new Item(0, "Vainilla Brew", "$1000");
-  let product2 = new Item(1, "Shangai Blend", "$1000");
-  let product3 = new Item(2, "Colombian Blend","$1000");
-
-*/
+class Products {
+  async getProducts (){
+    try {
+      let result = await fetch("atock.json");
+      let data = await result.json();
+      let products = data.items;
+      products = products.map(item => {
+      let {title,price} = item.fields;
+      let {id} = item.sys
+      let image = item.fields.image.fields.file.url;
+      return {title, price, id, image}
+    })
+      return products
+    }   catch(error){
+      console.log(error);
+    }
+  }
+}      

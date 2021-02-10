@@ -8,6 +8,8 @@ $grisClaro: #C8C8C8;
 $grisClaroHover: #ACABAB;
 $verde: #18b40a;
 $verdeHover: #5ae239;
+$red: rgb(129, 6, 6);
+$redHover:rgb(241, 12, 12);
 //Sombras
 $sombraDark: 10px 10px 20px rgba(170,170,170,.16);
 $sombraLight: 10px 10px 20px rgba(0,0,0,.16);
@@ -71,7 +73,7 @@ a {
 		color: $blanco;
 	}
 }
-//Header
+//NAVBAR
 nav {
 	background: $blanco;
 	display: flex;
@@ -149,7 +151,7 @@ nav {
 		color: $blanco;
 	}
 } 
-//Grid
+//Grid-PRODUCTOS
 .grid {
 	display: grid;
 	grid-gap: 40px 20px;
@@ -189,6 +191,11 @@ nav {
 		}
 	}
 }
+#details{
+	margin-top: 10%;
+	margin-left: 20%;
+	align-content: center;
+}
 .buttonBuy{
 	background-color: $verde;
 	margin: 10%;
@@ -205,7 +212,7 @@ nav {
 	}
 }
 .buttonCancel{
-	background-color: red;
+	background-color: $red;
 	margin: 10%;
 	padding: 10px;
 	color: #fff;
@@ -215,19 +222,33 @@ nav {
 	text-align: center;
 	border-radius: 20px;
 	transition: .3s ease all;
+	&:hover {
+		background: $redHover;
+	}
+}
+#productPic{
+	@include sm(){
+		width:  100%;
+	}
+	@include md(){
+		width:  100%;
+	}
+	@include lg(){
+		width:  100%;
+	}
 }
 
 //Footer
 #icon{
-        margin: 0.5%;
-        @include sm(){
-                width:  10%;
-        }
-        @include md(){
-                width:  7.5%;
-        }
-        @include lg(){
-                width:  5.5%;
-        }
+    margin: 0.5%;
+    @include sm(){
+         width:  10%;
+    }
+    @include md(){
+        width:  7.5%;
+    }
+    @include lg(){
+        width:  5.5%;
+    }
 }
 

@@ -200,6 +200,13 @@ body.dark .grid .card {
       grid-template-columns: 1fr 1fr;
 }
 
+#details {
+  margin-top: 10%;
+  margin-left: 20%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
 .buttonBuy {
   background-color: #18b40a;
   margin: 10%;
@@ -221,7 +228,7 @@ body.dark .grid .card {
 }
 
 .buttonCancel {
-  background-color: red;
+  background-color: #810606;
   margin: 10%;
   padding: 10px;
   color: #fff;
@@ -234,6 +241,28 @@ body.dark .grid .card {
   border-radius: 20px;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
+}
+
+.buttonCancel:hover {
+  background: #f10c0c;
+}
+
+@media (max-width: 430px) {
+  #productPic {
+    width: 100%;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 780px) {
+  #productPic {
+    width: 100%;
+  }
+}
+
+@media (min-width: 780px) {
+  #productPic {
+    width: 100%;
+  }
 }
 
 #icon {

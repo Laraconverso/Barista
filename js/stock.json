@@ -1,0 +1,100 @@
+{
+  "items": [
+    {
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Vainilla Brew",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "2" },
+      "fields": {
+        "title": "Shangai Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "3" },
+      "fields": {
+        "title": "Budapest Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "4" },
+      "fields": {
+        "title": "Colombia Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "5" },
+      "fields": {
+        "title": "Chocolate Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "6" },
+      "fields": {
+        "title": "Ethiopia Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "7" },
+      "fields": {
+        "title": "Capetown Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "8" },
+      "fields": {
+        "title": "Moscow Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "9" },
+      "fields": {
+        "title": "Caramel Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "10" },
+      "fields": {
+        "title": "Oslo Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "11" },
+      "fields": {
+        "title": "Vancouver Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    },
+    {
+      "sys": { "id": "12" },
+      "fields": {
+        "title": "Buenos Aires Blend",
+        "price": 1000,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
+    }
+  ]
+}
