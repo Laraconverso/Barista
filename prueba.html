@@ -29,11 +29,14 @@
                         </span>
                         <div class="cart-items">0</div>
                     </div>-->
-                    <div class="enlaces">
+                    <div class="enlaces" id="inf">
                         <a href="#main" id="home">Inicio</a>
-                        <a href="#products" id="products">Carrito</a>
                         <a href="#envios" id="envios">Envíos</a>
                         <a href="#aboutus" id="aboutus">Nosotros</a>
+                        <a href="#carrito" class="cart-btn">
+                            <i class="fas fa-cart-plus"></i>
+                        </a>
+                        <div class="cart-items"></div>
                         <button class="switch" id="switch">
                             <span><i class="fas fa-sun"></i></span>
                             <span><i class="fas fa-moon"></i></span>
@@ -49,88 +52,89 @@
             </div>
             <br>
              <!--PRODUCTS-->
-            <div>
-                <h4 id="inf">Nuestros Productos</h4>
-            </div>
-            <div id="products" class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="img/productModel.png" alt="product" id="productPic">
-                            </div>
-                            <div class="card-content" id="details">
-                                <span class="card-title">Vainilla Brew</span>
-                                <p>$1100</p>
-                            </div>
-                            <div class="botones">
-                                <button class="buttonBuy" onclick="addToCart(1)">Comprar</button>
-                                <button class="buttonCancel">Borrar</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="img/productModel.png" alt="product" id="productPic">
-                            </div>
-                            <div class="card-content" id="details">
-                                <span class="card-title">Shangai Blend</span>
-                                <p>$1100</p>
-                            </div>
-                            <div class="botones">
-                                <button class="buttonBuy" onclick="addToCart(1)">Comprar</button>
-                                <button class="buttonCancel">Borrar</button>
+            <section>
+                <div>
+                    <h4 id="inf">Nuestros Productos</h4>
+                </div>
+                <div id="products" class="container">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="img/productModel.png" alt="product" id="productPic">
+                                </div>
+                                <div class="card-content" id="details">
+                                    <span class="card-title">Vainilla Brew</span>
+                                    <p>$1100</p>
+                                </div>
+                                <div class="botones">
+                                    <button class="buttonBuy" onclick="addToCart(1)">Comprar</button>
+                                    <button class="buttonCancel">Borrar</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="img/productModel.png" alt="product" id="productPic">
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="img/productModel.png" alt="product" id="productPic">
+                                </div>
+                                <div class="card-content" id="details">
+                                    <span class="card-title">Shangai Blend</span>
+                                    <p>$1100</p>
+                                </div>
+                                <div class="botones">
+                                    <button class="buttonBuy" onclick="addToCart(1)">Comprar</button>
+                                    <button class="buttonCancel">Borrar</button>
+                                </div>
                             </div>
-                            <div class="card-content" id="details">
-                                <span class="card-title">Budapest Blend</span>
-                                <p>$1100</p>
-                            </div>
-                            <div class="botones">
-                                <button class="buttonBuy" onclick="addToCart(1)">Comprar</button>
-                                <button class="buttonCancel">Borrar</button>
-                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src="img/productModel.png" alt="product" id="productPic">
+                                </div>
+                                <div class="card-content" id="details">
+                                    <span class="card-title">Budapest Blend</span>
+                                    <p>$1100</p>
+                                </div>
+                                <div class="botones">
+                                    <button class="buttonBuy" onclick="addToCart(1)">Comprar</button>
+                                    <button class="buttonCancel">Borrar</button>
+                                </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+            </section>
             <br>
              <!--SHOPPING CART-->
-             <section>
-                <div>
-                    <h4 id="inf"><i class="fas fa-shopping-cart"></i> Carrito</h4>
-                    <div class="collapse previoCarrito">
-                        <div class="container mt-3">
-                          <h4 class="text-center">Carrito de compras</h4>
-                          <table class="table">
-                            <thead>
-                              <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">Item</th>
-                                <th scope="col">Cantidad</th>
-                                <th scope="col">Acción</th>
-                                <th scope="col">Total</th>
-                              </tr>
-                            </thead>
-                            <!--Se agregan los productos al carrito-->
-                            <tbody id="items">
-                            </tbody>
-                            <tfoot>
-                              <tr id="footer">
-                                <th  class="text-center" scope="row" colspan="5">Carrito vacío</th>
-                              </tr>
-                            </tfoot>
-                          </table>
+            <section id="carrito">
+                <div id="inf">
+                    <!--<span class="close-cart">
+                        <i class="fas fa-window-close"></i>
+                    </span>-->
+                    <h4><i class="fas fa-shopping-cart"></i> Tu Carrito</h4>
+                    <div class="cart-content">
+                        <div class="cart-item">
+                            <img src="img/productModel.png" alt="product">
+                            <div>
+                                <h5>Vainilla Brew</h5>
+                                <h6>$1100</h6>
+                                <span class="remove-item">Borrar</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-chevron-up"></i>
+                                <p class="item-amount"></p>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
                         </div>
-                      </div>                
-                 </div>
-             </section>
+                        <div class="cart-footer">
+                            <h4>TOTAL: $ <span class="cart-total">0</span></h4>
+                            <button  class="clear-cart banner-btn">Vaciar Carrito</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <br>
              <!--SHIPPING-->
             <div id="envios">
                 <h4 id="inf"><i class="fas fa-archive"></i> Envíos</h4>
@@ -142,6 +146,7 @@
                 <p id="inf">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, dolores natus non officia eos vero. Sed dolorum earum, dolore optio aliquam tempora officiis ipsa nobis quaerat praesentium saepe amet deleniti.</p>
             </div>
         </section>
+        <br>
          <!--FOOTER-->
         <footer>
             <div class="container">
@@ -163,7 +168,8 @@
                 </div>
             </div>
         </footer>
-        <script src="js/script.js"></script>
+        <script src="js/prueba.js"></script>
+        <script src="js/switch.js"></script>
     </body>
 </html> 
 <!--by LaraConverso>
