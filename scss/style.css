@@ -145,6 +145,24 @@ nav .enlaces a:hover {
   color: white;
 }
 
+@media (max-width: 430px) {
+  #portada {
+    width: 100%;
+  }
+}
+
+@media (min-width: 430px) and (max-width: 780px) {
+  #portada {
+    width: 100%;
+  }
+}
+
+@media (min-width: 780px) {
+  #portada {
+    width: 100%;
+  }
+}
+
 .grid {
   display: -ms-grid;
   display: grid;

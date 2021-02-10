@@ -151,6 +151,18 @@ nav {
 		color: $blanco;
 	}
 } 
+//Portada
+#portada{
+	@include sm(){
+		width:  100%;
+	}
+	@include md(){
+		width:  100%;
+	}
+	@include lg(){
+		width:  100%;
+	}
+}
 //Grid-PRODUCTOS
 .grid {
 	display: grid;

@@ -90,6 +90,18 @@ nav {
     background: none;
     color: white; }
 
+@media (max-width: 430px) {
+  #portada {
+    width: 100%; } }
+
+@media (min-width: 430px) and (max-width: 780px) {
+  #portada {
+    width: 100%; } }
+
+@media (min-width: 780px) {
+  #portada {
+    width: 100%; } }
+
 .grid {
   display: grid;
   grid-gap: 40px 20px;
