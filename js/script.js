@@ -291,4 +291,4 @@ class Products {
     }
   }
 }
-*/
+By Lara Converso*/
