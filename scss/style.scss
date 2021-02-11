@@ -3,6 +3,7 @@
 $blanco: white;
 $negro: black;
 $coffee: #4d301f;
+$orange: rgb(255, 145, 0);
 $grisOscuro: #222222;
 $grisClaro: #C8C8C8;
 $grisClaroHover: #ACABAB;
@@ -10,6 +11,8 @@ $verde: #18b40a;
 $verdeHover: #5ae239;
 $red: rgb(129, 6, 6);
 $redHover:rgb(241, 12, 12);
+$mainTransition: all 0.3s linear;
+$spacing: 0.1rem;
 //Sombras
 $sombraDark: 10px 10px 20px rgba(170,170,170,.16);
 $sombraLight: 10px 10px 20px rgba(0,0,0,.16);
@@ -111,17 +114,17 @@ nav {
 		cursor: pointer;
 		font-size: 1.5rem;
 	  }
-	  .cart-items {
-		position: absolute;
-		top: -8px;
-		right: -8px;
-		background: var(--primaryColor);
-		padding: 0 5px;
-		border-radius: 30%;
-		color: var(--mainWhite);
-	  }
 }
-
+.cart-items {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	background: $orange;
+	font-size: 60%;
+	padding: 0 5px;
+	border-radius: 20%;
+	color: ($blanco);
+}
 //Switch 
 .switch {
 	background:#343434;
@@ -146,7 +149,7 @@ nav {
 		box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
 	}
 	&.active{
-		background: orange;
+		background: $orange;
 		color: $negro;
 		&::after{
 			right: 0;
@@ -269,12 +272,12 @@ nav {
 	width: 100%;
 	height: 100%;
 	background: transparent;
-	transition: var(--mainTransition);
+	transition: $mainTransition;
 	background:  $blanco;
    	z-index: 2;
   	visibility: hidden;
 }
-.cart {
+.myCart {
   position: fixed;
   top: 0;
   right: 0;
@@ -284,7 +287,7 @@ nav {
   z-index: 3;
   background:$blanco;
   padding: 1.5rem;
-  transition: var(--mainTransition);
+  transition: $mainTransition;
   transform: translateX(100%);
 }
 .showCart {
@@ -294,7 +297,7 @@ nav {
   visibility: visible;
 }
 @media screen and (min-width: 768px) {
-  .cart {
+  .myCart {
     width: 30vw;
     min-width: 450px;
   }
@@ -303,10 +306,10 @@ nav {
   font-size: 1.7rem;
   cursor: pointer;
 }
-.cart h2 {
+.myCart h2 {
   text-transform: capitalize;
   text-align: center;
-  letter-spacing: var(--mainSpacing);
+  letter-spacing: $spacing;
   margin-bottom: 2rem;
 }
 .cart-item {
@@ -323,11 +326,11 @@ nav {
 .cart-item h4 {
 	font-size: 0.85rem;
 	text-transform: capitalize;
-	letter-spacing: var(--mainSpacing);
+	letter-spacing: $spacing;
 }
 .cart-item h5 {
 	margin: 0.5rem 0;
-	letter-spacing: var(--mainSpacing);
+	letter-spacing: $spacing;
 }
 .item-amount {
 	text-align: center;
@@ -338,17 +341,86 @@ nav {
 }
 .fa-chevron-up,
 .fa-chevron-down {
-	color: var(--primaryColor);
+	color: $orange;
 	cursor: pointer;
 }
 .cart-footer {
 	margin-top: 2rem;
-	letter-spacing: var(--mainSpacing);
+	letter-spacing: $spacing;
 	text-align: center;
 }
 .cart-footer h3 {
 	text-transform: capitalize;
 	margin-bottom: 1rem;
+}
+.products {
+	padding: 4rem 0;
+}
+.section-title h2 {
+	text-align: center;
+	font-size: 2.5rem;
+	margin-bottom: 5rem;
+	text-transform: capitalize;
+	letter-spacing: $spacing;
+}
+.products-center {
+	width: 90vw;
+	margin: 0 auto;
+	max-width: 1170px;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	grid-column-gap: 1.5rem;
+	grid-row-gap: 2rem;
+}
+.img-container {
+	position: relative;
+	overflow: hidden;
+}
+.bag-btn {
+	position: absolute;
+	top: 70%;
+	right: 0;
+	border: none;
+	text-transform: uppercase;
+	padding: 0.5rem 0.75rem;
+	letter-spacing: $spacing;
+	font-weight: bold;
+	transition: $mainTransition;
+	transform: translateX(101%);
+	cursor: pointer;
+}
+.bag-btn:hover {
+	color: $blanco;
+}
+.fa-shopping-cart {
+	margin-right: 0.5rem;
+}
+.img-container:hover .bag-btn {
+	transform: translateX(0);
+}
+.product-img {
+	display: block;
+	width: 100%;
+	min-height: 12rem;
+	transition: $mainTransition;
+}
+.img-container:hover .product-img {
+	opacity: 0.5;
+}
+  
+.product h3 {
+	text-transform: capitalize;
+	font-size: 1.1rem;
+	margin-top: 1rem;
+	letter-spacing: $spacing;
+	text-align: center;
+}
+  
+.product h4 {
+	margin-top: 0.7rem;
+	letter-spacing: $spacing;
+	color: $orange;
+	text-align: center;
 }
   
 //Footer
@@ -364,4 +436,3 @@ nav {
         width:  5.5%;
     }
 }
-

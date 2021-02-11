@@ -4,7 +4,7 @@
       "sys": { "id": "1" },
       "fields": {
         "title": "Vainilla Brew",
-        "price": 1000,
+        "price": 1100,
         "image": { "fields": { "file": { "url": "img/productModel.png" } } }
       }
     },
@@ -13,14 +13,14 @@
       "fields": {
         "title": "Shangai Blend",
         "price": 1000,
-        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+        "image": { "fields": { "file": { "url": "img/photoModel.png" } } }
       }
     },
     {
       "sys": { "id": "3" },
       "fields": {
         "title": "Budapest Blend",
-        "price": 1000,
+        "price": 900,
         "image": { "fields": { "file": { "url": "img/productModel.png" } } }
       }
     },
@@ -28,7 +28,7 @@
       "sys": { "id": "4" },
       "fields": {
         "title": "Colombia Blend",
-        "price": 1000,
+        "price": 1080,
         "image": { "fields": { "file": { "url": "img/productModel.png" } } }
       }
     },
@@ -36,7 +36,7 @@
       "sys": { "id": "5" },
       "fields": {
         "title": "Chocolate Blend",
-        "price": 1000,
+        "price": 987,
         "image": { "fields": { "file": { "url": "img/productModel.png" } } }
       }
     },
@@ -52,7 +52,7 @@
       "sys": { "id": "7" },
       "fields": {
         "title": "Capetown Blend",
-        "price": 1000,
+        "price": 1030,
         "image": { "fields": { "file": { "url": "img/productModel.png" } } }
       }
     },

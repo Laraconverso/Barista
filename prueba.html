@@ -33,10 +33,10 @@
                         <a href="#main" id="home">Inicio</a>
                         <a href="#envios" id="envios">Envíos</a>
                         <a href="#aboutus" id="aboutus">Nosotros</a>
-                        <a href="#carrito" class="cart-btn">
+                        <a class="cart-btn">
                             <i class="fas fa-cart-plus"></i>
+                            <div class="cart-items"></div>
                         </a>
-                        <div class="cart-items"></div>
                         <button class="switch" id="switch">
                             <span><i class="fas fa-sun"></i></span>
                             <span><i class="fas fa-moon"></i></span>
@@ -52,88 +52,55 @@
             </div>
             <br>
              <!--PRODUCTS-->
-            <section>
-                <div>
+            <i class="products">
+                <div class="section-title">
                     <h4 id="inf">Nuestros Productos</h4>
                 </div>
-                <div id="products" class="container">
-                    <div class="row">
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="img/productModel.png" alt="product" id="productPic">
-                                </div>
-                                <div class="card-content" id="details">
-                                    <span class="card-title">Vainilla Brew</span>
-                                    <p>$1100</p>
-                                </div>
-                                <div class="botones">
-                                    <button class="buttonBuy" onclick="addToCart(1)">Comprar</button>
-                                    <button class="buttonCancel">Borrar</button>
-                                </div>
-                            </div>
+                <div class="products-center" id="inf"> 
+                    <article class="product">
+                        <div class="img-container">
+                        <img src="img/productModel.png" alt="product" class="product-img"/>
+                        <button class="bag-btn" data-id="1">
+                            <i class="fas fa-shopping-cart"></i>
+                            agregar
+                        </button>
                         </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="img/productModel.png" alt="product" id="productPic">
-                                </div>
-                                <div class="card-content" id="details">
-                                    <span class="card-title">Shangai Blend</span>
-                                    <p>$1100</p>
-                                </div>
-                                <div class="botones">
-                                    <button class="buttonBuy" onclick="addToCart(1)">Comprar</button>
-                                    <button class="buttonCancel">Borrar</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-4">
-                            <div class="card">
-                                <div class="card-image">
-                                    <img src="img/productModel.png" alt="product" id="productPic">
-                                </div>
-                                <div class="card-content" id="details">
-                                    <span class="card-title">Budapest Blend</span>
-                                    <p>$1100</p>
-                                </div>
-                                <div class="botones">
-                                    <button class="buttonBuy" onclick="addToCart(1)">Comprar</button>
-                                    <button class="buttonCancel">Borrar</button>
-                                </div>
-                        </div>
-                    </div>
+                        <h3>Vainilla Brew</h3>
+                        <h4>$1100</h4>
+                    </article>
                 </div>
             </section>
             <br>
              <!--SHOPPING CART-->
-            <section id="carrito">
-                <div id="inf">
-                    <!--<span class="close-cart">
-                        <i class="fas fa-window-close"></i>
-                    </span>-->
-                    <h4><i class="fas fa-shopping-cart"></i> Tu Carrito</h4>
+            <div class="cart-overlay">
+                <div class="cart">
+                    <span class="close-cart"><i class="far fa-window-close"></i></span>
+                    <h2>Tu Orden</h2>
                     <div class="cart-content">
                         <div class="cart-item">
+                            <!--
                             <img src="img/productModel.png" alt="product">
                             <div>
-                                <h5>Vainilla Brew</h5>
-                                <h6>$1100</h6>
-                                <span class="remove-item">Borrar</span>
+                              <h4>Vainilla Brew</h4>
+                              <h5>$1100</h5>
+                              <span class="remove-item">Eliminar</span>
                             </div>
                             <div>
-                                <i class="fas fa-chevron-up"></i>
-                                <p class="item-amount"></p>
-                                <i class="fas fa-chevron-down"></i>
+                              <i class="fas fa-chevron-up"></i>
+                              <p class="item-amount">
+                                1
+                              </p>
+                              <i class="fas fa-chevron-down"></i>
                             </div>
+                        -->
                         </div>
                         <div class="cart-footer">
-                            <h4>TOTAL: $ <span class="cart-total">0</span></h4>
-                            <button  class="clear-cart banner-btn">Vaciar Carrito</button>
+                          <h3>TOTAL: $<span class="cart-total">0</span></h3>
+                          <button class="clear-cart banner-btn">Vaciar carrito</button>
                         </div>
-                    </div>
+                    </div>  
                 </div>
-            </section>
+            </div>
             <br>
              <!--SHIPPING-->
             <div id="envios">
