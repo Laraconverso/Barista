@@ -26,7 +26,7 @@ class Products{
         let{title,price} = item.fields;
         let{id} = item.sys;
         let image = item.fields.image.fields.file.url;
-        return {title, price,id,image};
+        return {title,price,id,image};
       });
       return products;
     } catch(error) {
@@ -50,7 +50,7 @@ class Customer{
                 </button>
             </div>
             <h3>${product.title}</h3>
-            <h4>${product.price}</h4>
+            <h4>$${product.price}</h4>
           </article>
        `;
         });
@@ -96,19 +96,18 @@ class Customer{
   addCartItem(item) {
     let div = document.createElement("div");
     div.classList.add("cart-item");
-    div.innerHTML = ` <img src=${item.image} alt="product">
-    <div>
-      <h4>${item.title}</h4>
-      <h5>${item.price}</h5>
-      <span class="remove-item" data-id${item.id}>Eliminar</span>
-    </div>
-    <div>
-      <i class="fas fa-chevron-up" data-id=${item.id}></i>
-      <p class="item-amount">
-      ${item.amount}
-      </p>
-      <i class="fas fa-chevron-down" ${item.amount}></i>
-    </div>
+    div.innerHTML = 
+    `<img src=${item.image} alt="product">
+      <div>
+        <h4>${item.title}</h4>
+        <h5>${item.price}</h5>
+        <span class="remove-item" data-id${item.id}>Eliminar</span>
+      </div>
+      <div>
+        <i class="fas fa-chevron-up" data-id=${item.id}></i>
+        <p class="item-amount">${item.amount}</p>
+        <i class="fas fa-chevron-down" ${item.id}></i>
+      </div>
     `;
     cartContent.appendChild(div);
   }
