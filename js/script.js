@@ -19,7 +19,6 @@ class Products{
     try{
       let result = await fetch('js/stock.json')
       let data = await result.json();
-    
       let products = data.items;
       console.log(products);
       products = products.map(item => {
@@ -58,7 +57,7 @@ class Customer{
         productsDOM.innerHTML = result;
       }
   getBagButtons() {
-    let buttons = [...document.querySelectorAll(".bag-btn")];
+    let buttons = [...$(".bag-btn")];
     buttonsDOM = buttons;
     buttons.forEach(button => {
       let id = button.dataset.id;
@@ -131,7 +130,7 @@ class Customer{
     cartDOM.classList.remove("showCart");
   }
 
-cartLogic() {
+  cartLogic() {
     clearCartBtn.addEventListener("click", () => {
       this.clearCart();
     });
@@ -207,7 +206,8 @@ class Storage{
     }
 }
 
-document.addEventListener("DOMContentLoaded" , () => {
+//jquery added
+$(document).ready(() => {
   let customer = new Customer();
   let products = new Products();
   customer.setupAPP();
