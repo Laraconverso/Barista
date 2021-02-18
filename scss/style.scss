@@ -277,7 +277,7 @@ nav {
    	z-index: 2;
   	visibility: hidden;
 }
-.myCart {
+.cart {
   position: fixed;
   top: 0;
   right: 0;
@@ -297,7 +297,7 @@ nav {
   visibility: visible;
 }
 @media screen and (min-width: 768px) {
-  .myCart {
+  .cart {
     width: 30vw;
     min-width: 450px;
   }
@@ -306,7 +306,7 @@ nav {
   font-size: 1.7rem;
   cursor: pointer;
 }
-.myCart h2 {
+.cart h2 {
   text-transform: capitalize;
   text-align: center;
   letter-spacing: $spacing;
@@ -318,19 +318,19 @@ nav {
 	grid-template-columns: auto 1fr auto;
 	grid-column-gap: 1.5rem;
 	margin: 1.5rem 0;
-}
-.cart-item img {
-	width: 75px;
-	height: 75px;
-}
-.cart-item h4 {
-	font-size: 0.85rem;
-	text-transform: capitalize;
-	letter-spacing: $spacing;
-}
-.cart-item h5 {
-	margin: 0.5rem 0;
-	letter-spacing: $spacing;
+	img {
+		width: 75px;
+		height: 75px;
+	}
+	h4 {
+		font-size: 0.85rem;
+		text-transform: capitalize;
+		letter-spacing: $spacing;
+	}
+	h5 {
+		margin: 0.5rem 0;
+		letter-spacing: $spacing;
+	}
 }
 .item-amount {
 	text-align: center;
@@ -348,10 +348,10 @@ nav {
 	margin-top: 2rem;
 	letter-spacing: $spacing;
 	text-align: center;
-}
-.cart-footer h3 {
-	text-transform: capitalize;
-	margin-bottom: 1rem;
+	h3 {
+		text-transform: capitalize;
+		margin-bottom: 1rem;
+	}
 }
 .products {
 	padding: 4rem 0;
@@ -388,9 +388,9 @@ nav {
 	transition: $mainTransition;
 	transform: translateX(101%);
 	cursor: pointer;
-}
-.bag-btn:hover {
-	color: $blanco;
+	&:hover {
+		color: $blanco;
+	}
 }
 .fa-shopping-cart {
 	margin-right: 0.5rem;
@@ -408,21 +408,21 @@ nav {
 	opacity: 0.5;
 }
   
-.product h3 {
-	text-transform: capitalize;
-	font-size: 1.1rem;
-	margin-top: 1rem;
-	letter-spacing: $spacing;
-	text-align: center;
+.product{
+	h3 {
+		text-transform: capitalize;
+		font-size: 1.1rem;
+		margin-top: 1rem;
+		letter-spacing: $spacing;
+		text-align: center;
+	}
+	h4 {
+		margin-top: 0.7rem;
+		letter-spacing: $spacing;
+		color: $orange;
+		text-align: center;
+	}
 }
-  
-.product h4 {
-	margin-top: 0.7rem;
-	letter-spacing: $spacing;
-	color: $orange;
-	text-align: center;
-}
-  
 //Footer
 #icon{
     margin: 0.5%;

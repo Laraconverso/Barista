@@ -311,7 +311,7 @@ body.dark .grid .card {
   visibility: hidden;
 }
 
-.myCart {
+.cart {
   position: fixed;
   top: 0;
   right: 0;
@@ -337,7 +337,7 @@ body.dark .grid .card {
 }
 
 @media screen and (min-width: 768px) {
-  .myCart {
+  .cart {
     width: 30vw;
     min-width: 450px;
   }
@@ -348,7 +348,7 @@ body.dark .grid .card {
   cursor: pointer;
 }
 
-.myCart h2 {
+.cart h2 {
   text-transform: capitalize;
   text-align: center;
   letter-spacing: 0.1rem;

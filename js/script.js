@@ -40,19 +40,20 @@ class Customer{
     displayProducts(products) {
         let result = "";
         products.forEach(product => {
-          result += `
-          <article class="product">
-            <div class="img-container">
-                <img src="img/productModel.png" alt="product" class="product-img"/>
-                <button class="bag-btn" data-id=${product.id}>
-                    <i class="fas fa-shopping-cart"></i>
-                    agregar
-                </button>
-            </div>
-            <h3>${product.title}</h3>
-            <h4>$${product.price}</h4>
-          </article>
-       `;
+          result += 
+          `
+            <article class="product">
+              <div class="img-container">
+                  <img src=${product.image} alt="product" class="product-img"/>
+                  <button class="bag-btn" data-id=${product.id}>
+                      <i class="fas fa-shopping-cart"></i>
+                      agregar
+                  </button>
+              </div>
+              <h3>${product.title}</h3>
+              <h4>$${product.price}</h4>
+            </article>
+          `;
         });
         productsDOM.innerHTML = result;
       }
@@ -100,13 +101,13 @@ class Customer{
     `<img src=${item.image} alt="product">
       <div>
         <h4>${item.title}</h4>
-        <h5>${item.price}</h5>
+        <h5>$${item.price}</h5>
         <span class="remove-item" data-id${item.id}>Eliminar</span>
       </div>
       <div>
         <i class="fas fa-chevron-up" data-id=${item.id}></i>
         <p class="item-amount">${item.amount}</p>
-        <i class="fas fa-chevron-down" ${item.id}></i>
+        <i class="fas fa-chevron-down" data-id=${item.id}></i>
       </div>
     `;
     cartContent.appendChild(div);
@@ -130,7 +131,6 @@ class Customer{
     cartDOM.classList.remove("showCart");
   }
 
-//FALTA PENSAR LA LOGICA DEL CARRITO
 cartLogic() {
     clearCartBtn.addEventListener("click", () => {
       this.clearCart();
