@@ -206,7 +206,6 @@ class Storage{
     }
 }
 
-//jquery added
 $(document).ready(() => {
   let customer = new Customer();
   let products = new Products();
