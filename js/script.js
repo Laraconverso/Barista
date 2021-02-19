@@ -67,7 +67,7 @@ class Customer{
         button.innerText = "Agregado";
         button.disabled = true;
       }
-      button.addEventListener("click", event => {
+      $(button).click(event => {
         // disable button
         event.target.innerText = "Agregado";
         event.target.disabled = true;
@@ -119,8 +119,8 @@ class Customer{
     cart = Storage.getCart();
     this.setCartValues(cart);
     this.populateCart(cart);
-    cartBtn.addEventListener("click", this.showCart);
-    closeCartBtn.addEventListener("click", this.hideCart);
+    $(cartBtn).click( this.showCart);
+    $(closeCartBtn).click(this.hideCart);
   }
   populateCart(cart) {
     cart.forEach(item => this.addCartItem(item));
@@ -131,10 +131,10 @@ class Customer{
   }
 
   cartLogic() {
-    clearCartBtn.addEventListener("click", () => {
+    $(clearCartBtn).click(() => {
       this.clearCart();
     });
-    cartContent.addEventListener("click", event => {
+    $(cartContent).click( event => {
       if (event.target.classList.contains("remove-item")) {
         let removeItem = event.target;
         let id = removeItem.dataset.id;
