@@ -34,6 +34,7 @@ class Products{
   }
 }
 
+
 //Display products
 class Customer{
     displayProducts(products) {

@@ -306,6 +306,10 @@ nav {
   padding: 1.5rem;
   transition: $mainTransition;
   transform: translateX(100%);
+  .dark &{
+	background-color: $negro;
+	color: $blanco;
+}
 }
 .showCart {
   transform: translateX(0);

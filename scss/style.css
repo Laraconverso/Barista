@@ -345,6 +345,11 @@ body.dark .grid .card {
           transform: translateX(100%);
 }
 
+.dark .cart {
+  background-color: black;
+  color: white;
+}
+
 .showCart {
   -webkit-transform: translateX(0);
           transform: translateX(0);
