@@ -298,10 +298,9 @@ body.dark .grid .card {
 }
 
 .banner-btn {
-  padding: 1rem 3rem;
+  padding: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  font-size: 1rem;
   background: #ff9100;
   color: black;
   border: 1px solid #ff9100;
@@ -313,6 +312,22 @@ body.dark .grid .card {
 .banner-btn:hover {
   background: transparent;
   color: #ff9100;
+}
+
+.finalizar {
+  padding: 1rem;
+  text-transform: uppercase;
+  background: #18b40a;
+  color: black;
+  border: 1px solid #18b40a;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+
+.finalizar:hover {
+  background: transparent;
+  color: #18b40a;
 }
 
 .cart-overlay {

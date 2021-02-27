@@ -188,6 +188,7 @@ class Customer{
   }
 }
 
+
 //Local storage
 class Storage{
     static saveProducts(products) {

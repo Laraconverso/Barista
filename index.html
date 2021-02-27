@@ -99,7 +99,16 @@
                         <div class="cart-footer">
                           <h3>TOTAL: $<span class="cart-total">0</span></h3>
                           <button class="clear-cart banner-btn">Vaciar carrito</button>
-                          <button class="finalizar"> Finalizar Compra </button>
+                          <button type="button" onclick="end()" class="finalizar">Finalizar Compra </button>
+                          <form action="path/to/server/script" method="post" id="my_form">
+                                <label>Nombre</label>
+                                 <input type="text" name="name" />
+                                 <label>DNI</label>
+                                 <input type="text" name=dni />
+                                 <label>Email</label>
+                                 <input type="email" name="email" />
+                                 <button>Pagar</button>
+                            </form>
                         </div>
                     </div>  
                 </div>
@@ -140,6 +149,7 @@
         </footer>
         <script src="js/script.js"></script>
         <script src="js/switch.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </body>
 </html> 
 <!--by LaraConverso>
