@@ -532,6 +532,10 @@ body.dark .grid .card {
   text-align: center;
 }
 
+#mercadopago {
+  visibility: hidden;
+}
+
 #icon {
   margin: 0.5%;
 }

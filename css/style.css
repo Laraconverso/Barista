@@ -370,6 +370,9 @@ nav {
   color: #ff9100;
   text-align: center; }
 
+#mercadopago {
+  visibility: hidden; }
+
 #icon {
   margin: 0.5%; }
   @media (max-width: 430px) {

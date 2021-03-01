@@ -20,7 +20,6 @@ class Products{
       let result = await fetch('js/stock.json')
       let data = await result.json();
       let products = data.items;
-      console.log(products);
       products = products.map(item => {
         let{title,price} = item.fields;
         let{id} = item.sys;
@@ -33,8 +32,6 @@ class Products{
     }
   }
 }
-
-
 //Display products
 class Customer{
     displayProducts(products) {
@@ -187,20 +184,17 @@ class Customer{
     return buttonsDOM.find(button => button.dataset.id === id);
   }
 }
-function getPost(){
-  $.ajax({
-    type: 'GET',
-    url:'https://jsonplaceholder.typicode.com/users',
-    dataType:'json',
-    success: function (response) {
-      console,log(response);
-    },
-    error:function (error) {
-      
-    }
-  });
-}
-function end() {
+//Aparicion de boton de mercado pago 
+$(document).ready(function() {
+  $('#mercadoPago').hide();
+          $('#end').click(function(){
+              $('#end').hide();
+              $('#vaciar').hide();
+              $('#mercadoPago').show();
+          });
+});
+
+/*function end() {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -210,7 +204,7 @@ function end() {
   xhttp.open("GET", "info.txt", true);
   xhttp.send();
 }
-
+*/
 //Local storage
 class Storage{
     static saveProducts(products) {
