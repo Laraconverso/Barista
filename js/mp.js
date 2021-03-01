@@ -1,3 +1,4 @@
+//PRUEBA//
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
 // SDK de Mercado Pago
@@ -19,9 +20,12 @@ mercadopago.configure({
 let preference = {
   items: [
     {
-      title: 'Mi producto',
-      unit_price: 100,
-      quantity: 1,
+      "sys": { "id": "1" },
+      "fields": {
+        "title": "Vainilla Brew",
+        "price": 1100,
+        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+      }
     }
   ]
 };
@@ -34,4 +38,6 @@ mercadopago.preferences.create(preference)
   console.log(error);
 });
 
+//boton
 
+//boton de pago <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id='<%= global.id %>'></script>
