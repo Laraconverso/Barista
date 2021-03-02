@@ -184,7 +184,7 @@ class Customer{
     return buttonsDOM.find(button => button.dataset.id === id);
   }
 }
-//Aparicion de boton de mercado pago 
+//Mercado Pago button  
 $(document).ready(function() {
   $('#mercadoPago').hide();
           $('#end').click(function(){
@@ -238,8 +238,4 @@ $(document).ready(() => {
       customer.cartLogic();
     });
 });
-      
-
-
-
 //By Lara Converso
