@@ -1,8 +1,6 @@
 //PRUEBA//
 // SDK de Mercado Pago
 const mercadopago = require ('mercadopago');
-// SDK de Mercado Pago
-const mercadopago = require ('mercadopago');
 
 // Agrega credenciales
 mercadopago.configure({
