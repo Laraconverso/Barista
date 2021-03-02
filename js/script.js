@@ -238,4 +238,5 @@ $(document).ready(() => {
       customer.cartLogic();
     });
 });
+
 //By Lara Converso
