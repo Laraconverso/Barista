@@ -93,7 +93,7 @@ class Customer{
 
   addCartItem(item) {
     let div = document.createElement("div");
-    div.classList.add("cart-item");
+    $(div).addClass("cart-item");
     div.innerHTML = 
     `<img src=${item.image} alt="product">
       <div>
@@ -110,8 +110,8 @@ class Customer{
     cartContent.appendChild(div);
   }
   showCart() {
-    cartOverlay.classList.add("transparentBcg");
-    cartDOM.classList.add("showCart");
+    $(cartOverlay).addClass("transparentBcg");
+    $(cartDOM).addClass("showCart");
   }
   setupAPP() {
     cart = Storage.getCart();
@@ -124,8 +124,8 @@ class Customer{
     cart.forEach(item => this.addCartItem(item));
   }
   hideCart() {
-    cartOverlay.classList.remove("transparentBcg");
-    cartDOM.classList.remove("showCart");
+    $(cartOverlay).removeClass("transparentBcg");
+    $(cartDOM).removeClass("showCart");
   }
 
   cartLogic() {
