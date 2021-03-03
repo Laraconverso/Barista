@@ -36,6 +36,5 @@ mercadopago.preferences.create(preference)
   console.log(error);
 });
 
-//boton
 
 //boton de pago <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id='<%= global.id %>'></script>
