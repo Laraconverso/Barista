@@ -24,19 +24,19 @@
                         </span>
                     </div>-->
                     <a class="logotipo" href="#">Barista</a>
-                    <!--<div class="btn-cart">
+                    <!--<div class="btn">
                         <span class="nav-icon">
                             <i class="fas fa-cart-plus"></i>
                         </span>
-                        <div class="cart-items">0</div>
+                        <div class="items">0</div>
                     </div>-->
                     <div class="enlaces" id="inf">
                         <a href="#main" id="home">Inicio</a>
                         <a href="#envios">Envíos</a>
                         <a href="#aboutus">Nosotros</a>
-                        <a class="btn-cart">
+                        <a class="btn">
                             <i class="fas fa-cart-plus"></i>
-                            <div class="cart-items"></div>
+                            <div class="items"></div>
                         </a>
                         <button class="switch" id="switch">
                             <span><i class="fas fa-sun"></i></span>
@@ -57,7 +57,7 @@
                 <div class="section-title">
                     <h4 id="inf">Nuestros Productos</h4>
                 </div>
-                <div class="products-center" id="inf"> 
+                <div class="products" id="inf"> 
                     <article class="product">
                         <div class="photo">
                         <img src="img/productModel.png" alt="product" class="product-img"/>
@@ -66,25 +66,25 @@
                             agregar
                         </button>
                         </div>
-                        <h3>Vainilla Brew</h3>
+                        <h3 id="inf">Vainilla Brew</h3>
                         <h4>$1100</h4>
                     </article>
                 </div>
+            </i>
             </section>
             <br>
              <!--SHOPPING CART-->
-            <div class="cart-overlay">
+            <div class="sideBar">
                 <div class="cart">
-                    <span class="close-cart"><i class="far fa-window-close"></i></span>
+                    <span class="close"><i class="far fa-window-close"></i></span>
                     <h2>Tu Orden</h2>
-                    <div class="cart-content">
+                    <div class="content">
                          <!--
                         <div class="cart-item">
                             <img src="img/productModel.png" alt="product">
                             <div>
                               <h4>Vainilla Brew</h4>
                               <h5>$1100</h5>
-                              <span class="remove-item">Eliminar</span>
                             </div>
                             <div>
                               <i class="fas fa-chevron-up"></i>
@@ -97,8 +97,8 @@
                         -->
                         </div>
                         <div class="cart-footer">
-                            <h3>TOTAL: $<span class="cart-total">0</span></h3>
-                            <button class="clear-cart banner-btn" id="vaciar">Vaciar carrito</button>
+                            <h3>TOTAL: $<span class="total">0</span></h3>
+                            <button class="clear banner-btn" id="vaciar">Vaciar carrito</button>
                             <button type="button" class="finalizar" onclick="end()" id="end">Finalizar Compra</button>
                             <button id="mercadoPago"><script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id='<%= global.id %>'></script></button>
                         </div>
