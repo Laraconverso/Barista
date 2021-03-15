@@ -224,7 +224,8 @@ $(document).ready(function() {
           });
 });
 
-/*function end() {
+/* PRUEBA
+function end() {
   let xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -235,7 +236,6 @@ $(document).ready(function() {
   xhttp.send();
 }
 */
-
 
 //Local storage
 class Storage{
