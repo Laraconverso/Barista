@@ -51,7 +51,7 @@ class Customer{
                       agregar
                   </button>
               </div>
-              <h3>${product.title}</h3>
+              <h3>${product.title} (10)</h3>
               <h4>$${product.price}</h4>
             </article>
           `;

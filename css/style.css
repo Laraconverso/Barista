@@ -327,6 +327,7 @@ nav {
   overflow: hidden; }
 
 .bag-btn {
+  background: #ff9100;
   position: absolute;
   top: 70%;
   right: 0;
