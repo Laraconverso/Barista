@@ -1,40 +1,21 @@
-//Variables
-let cartBtn= document.querySelector(".cart-btn");
-let closeCartBtn = document.querySelector(".close-cart");
-let clearCartBtn = document.querySelector(".clear-cart");
-let cartDOM = document.querySelector(".cart");
-let cartOverlay = document.querySelector(".cart-overlay");
-let cartItems = document.querySelector(".cart-items");
-let cartTotal = document.querySelector(".cart-total");
-let cartContent = document.querySelector(".cart-content");
-let productsDOM = document.querySelector(".products-center");
-
 //Cart & Buttons 
 let cart =[];
 let buttonsDOM = [];
 
-//Getting the products from Json 
-class Products{
-  async getProducts(){
-    try{
-      let result = await fetch('js/stock.json')
-      let data = await result.json();
-      let products = data.items;
-      products = products.map(item => {
-        let{title,price} = item.fields;
-        let{id} = item.sys;
-        let image = item.fields.image.fields.file.url;
-        return {title,price,id,image};
-      });
-      return products;
-    } catch(error) {
-      console.log(error);
-    }
-  }
-}
+//Variablesl
+let productsDOM = document.querySelector(".products-center"); //Showing the products in the Page
+let btn= document.querySelector(".btn-cart"); //visualize/open cart button
+let cDOM = document.querySelector(".cart"); //CartDOM (strutcture)
+let sideBar = document.querySelector(".cart-overlay"); //SideBar Logic 
+let cartContent = document.querySelector(".cart-content"); // Adding Items and removing them
+let cartItems = document.querySelector(".cart-items"); //Whats in the Cart
+let clearAllBtn = document.querySelector(".clear-cart"); //Remove all the items from the cart button
+let totalCh = document.querySelector(".cart-total"); //Calculating the total checkout
+let closeBtn = document.querySelector(".close-cart"); //close/hide cart button
 
 
-//Customer
+
+//Setting up the Customer view
 class Customer{
 
   //Display Products 
@@ -44,7 +25,7 @@ class Customer{
           result += 
           `
             <article class="product">
-              <div class="img-container">
+              <div class="photo">
                   <img src=${product.image} alt="product" class="product-img"/>
                   <button class="bag-btn" data-id=${product.id}>
                       <i class="fas fa-shopping-cart"></i>
@@ -95,7 +76,7 @@ class Customer{
       tempTotal += item.price * item.amount;
       itemsTotal += item.amount;
     });
-    cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
+    totalCh.innerText = parseFloat(tempTotal.toFixed(1));
     cartItems.innerText = itemsTotal;
   }
 
@@ -123,17 +104,17 @@ class Customer{
 
   //Cart SideBar
   showCart() {
-    $(cartOverlay).addClass("transparentBcg");
-    $(cartDOM).addClass("showCart");
+    $(sideBar).addClass("transparentBcg");
+    $(cDOM).addClass("showCart");
   }
 
   //Setting the Cart SideBar
-  setupAPP() {
+  setupCART() {
     cart = Storage.getCart();
     this.setCartValues(cart);
     this.populateCart(cart);
-    $(cartBtn).click( this.showCart);
-    $(closeCartBtn).click(this.hideCart);
+    $(btn).click( this.showCart);
+    $(closeBtn).click(this.closeCart);
   }
 
   //Adding item
@@ -141,17 +122,17 @@ class Customer{
     cart.forEach(item => this.addCartItem(item));
   }
 
-  //Hide Cart
-  hideCart() {
-    $(cartOverlay).removeClass("transparentBcg");
-    $(cartDOM).removeClass("showCart");
+  //Close Cart
+  closeCart() {
+    $(sideBar).removeClass("transparentBcg");
+    $(cDOM).removeClass("showCart");
   }
 
   //Cart Logic
   cartLogic() {
 
     //Clear Cart button 
-    $(clearCartBtn).click(() => {
+    $(clearAllBtn).click(() => {
       this.clearCart();
     });
 
@@ -196,7 +177,7 @@ class Customer{
     while (cartContent.children.length > 0) {
       cartContent.removeChild(cartContent.children[0]);
     }
-    this.hideCart();
+    this.closeCart();
   }
 
   //Removing items
@@ -213,7 +194,25 @@ class Customer{
   }
 }
 
-
+//Getting the products from Json 
+class Products{
+  async getProducts(){
+    try{
+      let result = await fetch('js/stock.json')
+      let data = await result.json();
+      let products = data.items;
+      products = products.map(item => {
+        let{title,price} = item.fields;
+        let{id} = item.sys;
+        let image = item.fields.image.fields.file.url;
+        return {title,price,id,image};
+      });
+      return products;
+    } catch(error) {
+      console.log(error);
+    }
+  }
+}
 
 //Mercado Pago button  
 $(document).ready(function() {
@@ -262,7 +261,7 @@ class Storage{
 $(document).ready(() => {
   let customer = new Customer();
   let products = new Products();
-  customer.setupAPP();
+  customer.setupCART();
 
 
   //Display Products

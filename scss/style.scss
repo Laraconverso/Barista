@@ -3,8 +3,8 @@
 $blanco: white;
 $negro: black;
 $coffee: #4d301f;
-$orange: rgb(255, 145, 0);
-$orangesuave:rgba(255, 187, 124, 0.534);
+$main: #e48202;
+$mainsuave:#ff910098;
 $grisOscuro: #222222;
 $grisClaro: #C8C8C8;
 $grisClaroHover: #ACABAB;
@@ -110,7 +110,7 @@ nav {
 			}
 		}
 	}
-	.cart-btn {
+	.btn-cart {
 		position: relative;
 		cursor: pointer;
 		font-size: 1.5rem;
@@ -120,7 +120,7 @@ nav {
 	position: absolute;
 	top: -8px;
 	right: -8px;
-	background: $orange;
+	background: $main;
 	font-size: 60%;
 	padding: 0 5px;
 	border-radius: 20%;
@@ -150,7 +150,7 @@ nav {
 		box-shadow: 0px 0px 2px 2px rgba(0,0,0,.2);
 	}
 	&.active{
-		background: $orange;
+		background: $main;
 		color: $negro;
 		&::after{
 			right: 0;
@@ -271,14 +271,14 @@ nav {
 	padding: 1rem;
 	text-transform: uppercase;
 	letter-spacing: $spacing;
-	background: $orange;
+	background: $main;
 	color: $negro;
-	border: 1px solid $orange;
+	border: 1px solid $main;
 	transition:$mainTransition;
 	cursor: pointer;
 	&:hover {
 		background: transparent;
-		color: $orange;
+		color: $main;
 	  }
 }
 .finalizar{
@@ -301,7 +301,7 @@ nav {
 	width: 100%;
 	height: 100%;
 	transition: $mainTransition;
-	background: $orangesuave;
+	background: $mainsuave;
    	z-index: 2;
   	visibility: hidden;
 }
@@ -373,7 +373,7 @@ nav {
 }
 .fa-chevron-up,
 .fa-chevron-down {
-	color: $orange;
+	color: $main;
 	cursor: pointer;
 }
 .cart-footer {
@@ -404,12 +404,12 @@ nav {
 	grid-column-gap: 1.5rem;
 	grid-row-gap: 2rem;
 }
-.img-container {
+.photo {
 	position: relative;
 	overflow: hidden;
 }
 .bag-btn {
-	background: $orange;
+	background: $main;
 	position: absolute;
 	top: 70%;
 	right: 0;
@@ -428,7 +428,7 @@ nav {
 .fa-shopping-cart {
 	margin-right: 0.5rem;
 }
-.img-container:hover .bag-btn {
+.photo:hover .bag-btn {
 	transform: translateX(0);
 }
 .product-img {
@@ -437,7 +437,7 @@ nav {
 	min-height: 12rem;
 	transition: $mainTransition;
 }
-.img-container:hover .product-img {
+.photo:hover .product-img {
 	opacity: 0.5;
 }
   
@@ -452,7 +452,7 @@ nav {
 	h4 {
 		margin-top: 0.7rem;
 		letter-spacing: $spacing;
-		color: $orange;
+		color: $main;
 		text-align: center;
 	}
 }

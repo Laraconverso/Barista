@@ -52,7 +52,7 @@ nav {
       margin-right: 40px; }
       nav .enlaces a:hover {
         color: #707070; }
-  nav .cart-btn {
+  nav .btn-cart {
     position: relative;
     cursor: pointer;
     font-size: 1.5rem; }
@@ -61,7 +61,7 @@ nav {
   position: absolute;
   top: -8px;
   right: -8px;
-  background: #ff9100;
+  background: #e48202;
   font-size: 60%;
   padding: 0 5px;
   border-radius: 20%;
@@ -89,7 +89,7 @@ nav {
     transition: .3s ease all;
     box-shadow: 0px 0px 2px 2px rgba(0, 0, 0, 0.2); }
   .switch.active {
-    background: #ff9100;
+    background: #e48202;
     color: black; }
     .switch.active::after {
       right: 0;
@@ -197,14 +197,14 @@ nav {
   padding: 1rem;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
-  background: #ff9100;
+  background: #e48202;
   color: black;
-  border: 1px solid #ff9100;
+  border: 1px solid #e48202;
   transition: all 0.3s linear;
   cursor: pointer; }
   .banner-btn:hover {
     background: transparent;
-    color: #ff9100; }
+    color: #e48202; }
 
 .finalizar {
   padding: 1rem;
@@ -225,7 +225,7 @@ nav {
   width: 100%;
   height: 100%;
   transition: all 0.3s linear;
-  background: rgba(255, 187, 124, 0.534);
+  background: #ff910098;
   z-index: 2;
   visibility: hidden; }
 
@@ -292,7 +292,7 @@ nav {
 
 .fa-chevron-up,
 .fa-chevron-down {
-  color: #ff9100;
+  color: #e48202;
   cursor: pointer; }
 
 .cart-footer {
@@ -322,12 +322,12 @@ nav {
   grid-column-gap: 1.5rem;
   grid-row-gap: 2rem; }
 
-.img-container {
+.photo {
   position: relative;
   overflow: hidden; }
 
 .bag-btn {
-  background: #ff9100;
+  background: #e48202;
   position: absolute;
   top: 70%;
   right: 0;
@@ -345,7 +345,7 @@ nav {
 .fa-shopping-cart {
   margin-right: 0.5rem; }
 
-.img-container:hover .bag-btn {
+.photo:hover .bag-btn {
   transform: translateX(0); }
 
 .product-img {
@@ -354,7 +354,7 @@ nav {
   min-height: 12rem;
   transition: all 0.3s linear; }
 
-.img-container:hover .product-img {
+.photo:hover .product-img {
   opacity: 0.5; }
 
 .product h3 {
@@ -367,7 +367,7 @@ nav {
 .product h4 {
   margin-top: 0.7rem;
   letter-spacing: 0.1rem;
-  color: #ff9100;
+  color: #e48202;
   text-align: center; }
 
 #mercadopago {
