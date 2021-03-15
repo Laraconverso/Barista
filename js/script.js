@@ -13,7 +13,7 @@ let productsDOM = document.querySelector(".products-center");
 let cart =[];
 let buttonsDOM = [];
 
-//Getting the products
+//Getting the products from Json 
 class Products{
   async getProducts(){
     try{
@@ -32,8 +32,12 @@ class Products{
     }
   }
 }
-//Display products
+
+
+//Customer
 class Customer{
+
+  //Display Products 
     displayProducts(products) {
         let result = "";
         products.forEach(product => {
@@ -54,6 +58,8 @@ class Customer{
         });
         productsDOM.innerHTML = result;
       }
+
+  //Add Item Buttons 
   getBagButtons() {
     let buttons = [...$(".bag-btn")];
     buttonsDOM = buttons;
@@ -80,6 +86,8 @@ class Customer{
       });
     });
   }
+
+  //Checkout total
   setCartValues(cart) {
     let tempTotal = 0;
     let itemsTotal = 0;
@@ -91,6 +99,8 @@ class Customer{
     cartItems.innerText = itemsTotal;
   }
 
+
+  //Adding Items to the Cart
   addCartItem(item) {
     let div = document.createElement("div");
     $(div).addClass("cart-item");
@@ -109,10 +119,15 @@ class Customer{
     `;
     cartContent.appendChild(div);
   }
+
+
+  //Cart SideBar
   showCart() {
     $(cartOverlay).addClass("transparentBcg");
     $(cartDOM).addClass("showCart");
   }
+
+  //Setting the Cart SideBar
   setupAPP() {
     cart = Storage.getCart();
     this.setCartValues(cart);
@@ -120,34 +135,43 @@ class Customer{
     $(cartBtn).click( this.showCart);
     $(closeCartBtn).click(this.hideCart);
   }
+
+  //Adding item
   populateCart(cart) {
     cart.forEach(item => this.addCartItem(item));
   }
+
+  //Hide Cart
   hideCart() {
     $(cartOverlay).removeClass("transparentBcg");
     $(cartDOM).removeClass("showCart");
   }
 
+  //Cart Logic
   cartLogic() {
+
+    //Clear Cart button 
     $(clearCartBtn).click(() => {
       this.clearCart();
     });
-    $(cartContent).click( event => {
+
+    //Cart Content // Single Item (In Cart) Actions
+    $(cartContent).click( event => { 
       if (event.target.classList.contains("remove-item")) {
         let removeItem = event.target;
         let id = removeItem.dataset.id;
-        cartContent.removeChild(removeItem.parentElement.parentElement);
-        // remove item
+        cartContent.removeChild(removeItem.parentElement.parentElement); 
         this.removeItem(id);
-      } else if (event.target.classList.contains("fa-chevron-up")) {
+      } else if (event.target.classList.contains("fa-chevron-up")) { //Adding Single Item
         let addAmount = event.target;
         let id = addAmount.dataset.id;
         let tempItem = cart.find(item => item.id === id);
         tempItem.amount = tempItem.amount + 1;
+        
         Storage.saveCart(cart);
         this.setCartValues(cart);
         addAmount.nextElementSibling.innerText = tempItem.amount;
-      } else if (event.target.classList.contains("fa-chevron-down")) {
+      } else if (event.target.classList.contains("fa-chevron-down")) { //Removing Single Item
         let lowerAmount = event.target;
         let id = lowerAmount.dataset.id;
         let tempItem = cart.find(item => item.id === id);
@@ -163,6 +187,8 @@ class Customer{
       }
     });
   }
+
+  //Clear Cart
   clearCart() {
     // console.log(this);
     let cartItems = cart.map(item => item.id);
@@ -172,6 +198,8 @@ class Customer{
     }
     this.hideCart();
   }
+
+  //Removing items
   removeItem(id) {
     cart = cart.filter(item => item.id !== id);
     this.setCartValues(cart);
@@ -184,6 +212,9 @@ class Customer{
     return buttonsDOM.find(button => button.dataset.id === id);
   }
 }
+
+
+
 //Mercado Pago button  
 $(document).ready(function() {
   $('#mercadoPago').hide();
@@ -205,6 +236,8 @@ $(document).ready(function() {
   xhttp.send();
 }
 */
+
+
 //Local storage
 class Storage{
     static saveProducts(products) {
@@ -224,11 +257,15 @@ class Storage{
     }
 }
 
+
+//Customer view
 $(document).ready(() => {
   let customer = new Customer();
   let products = new Products();
   customer.setupAPP();
-  //get stock 
+
+
+  //Display Products
   products.getProducts().then(products => {
       customer.displayProducts(products);
       Storage.saveProducts(products);
