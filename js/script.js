@@ -1,10 +1,10 @@
 //Cart & Buttons 
-var carrito =[];
+var carrito = [];
 var botones  = [];
 
 //Variables
 let capsulas = document.querySelector(".products"); //Showing the products in the Page
-let btn= document.querySelector(".btn"); //visualize/open cart button
+let btn = document.querySelector(".btn"); //visualize/open cart button
 let cDOM = document.querySelector(".cart"); //CartDOM (strutcture)
 let sideBar = document.querySelector(".sideBar"); //SideBar Logic 
 let content = document.querySelector(".content"); // Adding Items and removing them

@@ -5,7 +5,7 @@
       "fields": {
         "title": "Vainilla Brew",
         "price": 1100,
-        "image": { "fields": { "file": { "url": "img/pruebacap.png" } } }
+        "image": { "fields": { "file": { "url": "img/vainilla.png" } } }
       }
     },
     {
@@ -45,7 +45,7 @@
       "fields": {
         "title": "Ethiopia Blend",
         "price": 1000,
-        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+        "image": { "fields": { "file": { "url": "img/Ethiopia.png" } } }
       }
     },
     {
@@ -53,7 +53,7 @@
       "fields": {
         "title": "Capetown Blend",
         "price": 1030,
-        "image": { "fields": { "file": { "url": "img/productModel.png" } } }
+        "image": { "fields": { "file": { "url": "img/capetown.png" } } }
       }
     },
     {
