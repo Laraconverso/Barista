@@ -193,11 +193,11 @@ nav {
 
 @media (max-width: 430px) {
   #productPic {
-    width: 100%; } }
+    width: 40%; } }
 
 @media (min-width: 430px) and (max-width: 780px) {
   #productPic {
-    width: 100%; } }
+    width: 90%; } }
 
 @media (min-width: 780px) {
   #productPic {
@@ -347,7 +347,7 @@ nav {
   letter-spacing: 0.1rem;
   font-weight: bold;
   transition: all 0.3s linear;
-  transform: translateX(101%);
+  transform: translateY(101%);
   cursor: pointer; }
   .bag-btn:hover {
     color: white; }
@@ -356,13 +356,17 @@ nav {
   margin-right: 0.5rem; }
 
 .photo:hover .bag-btn {
-  transform: translateX(0); }
+  transform: translateY(0); }
 
 .product-img {
   display: block;
-  width: 100%;
-  min-height: 12rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
   transition: all 0.3s linear; }
+  @media (max-width: 430px) {
+    .product-img {
+      width: 20%; } }
 
 .photo:hover .product-img {
   opacity: 0.5; }

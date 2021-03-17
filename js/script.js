@@ -32,7 +32,8 @@ class Customer{
                       agregar
                   </button>
               </div>
-              <h3>${product.title} (10)</h3>
+              <hr>
+              <h3 id="inf">${product.title} (10)</h3>
               <h4>$${product.price}</h4>
             </article>
           `;
