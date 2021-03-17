@@ -50,7 +50,7 @@
       "fields": {
         "title": "Ethiopia Blend",
         "price": 1000,
-        "image": { "fields": { "file": { "url": "img/11.png" } } },
+        "image": { "fields": { "file": { "url": "img/10.png" } } },
         "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
       }
     },
