@@ -33,7 +33,7 @@ class Customer{
                   </button>
               </div>
               <hr>
-              <h3 id="inf">${product.title} (10)</h3>
+              <h3 id="inf">${product.title} (10) </h3>
               <h4>$${product.price}</h4>
             </article>
           `;

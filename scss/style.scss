@@ -263,33 +263,44 @@ nav {
 }
 #productPic{
 	@include sm(){
-		width:  40%;
+		width:  100%;
 	}
 	@include md(){
-		width:  90%;
+		width:  100%;
 	}
 	@include lg(){
 		width:  100%;
 	}
 }
 
+hr{
+	color: $negro;
+	.dark &{
+		color: $blanco;
+	}
+	width: 70%;
+	margin-left: auto;
+  	margin-right: auto;
+}
 //CARRITO
 .banner-btn {
-	padding: 1rem;
+	padding: 1%;
 	text-transform: uppercase;
-	letter-spacing: $spacing;
-	background: $main;
+	font-size: 90%;
+	//letter-spacing: $spacing;
+	background: $redHover;
 	color: $negro;
-	border: 1px solid $main;
+	border: 0.5px solid $redHover;
 	transition:$mainTransition;
 	cursor: pointer;
 	&:hover {
 		background: transparent;
-		color: $main;
+		color: $redHover;
 	  }
 }
 .finalizar{
-	padding: 1rem;
+	padding: 1%;
+	font-size: 90%;
 	text-transform: uppercase;
 	background: $verde;
 	color: $negro;
@@ -327,7 +338,7 @@ nav {
   .dark &{
 	background-color: $negro;
 	color: $blanco;
-}
+	}
 }
 .showCart {
 	transform: translateX(0);
@@ -358,8 +369,7 @@ nav {
 	grid-column-gap: 1.5rem;
 	margin: 1.5rem 0;
 	img {
-		width: 75px;
-		height: 75px;
+		width: 20%;
 	}
 	h4 {
 		font-size: 0.85rem;
@@ -426,7 +436,15 @@ nav {
 	letter-spacing: $spacing;
 	font-weight: bold;
 	transition: $mainTransition;
-	transform: translateY(101%);
+	transform: translateY(150%);
+	margin-left: auto;
+	margin-right: 23%;
+	@include sm(){
+		margin-right: 40%
+	};
+	@include md(){
+		margin-right: 35%;
+	}
 	cursor: pointer;
 	&:hover {
 		color: $blanco;
@@ -455,6 +473,7 @@ nav {
 .product{
 	h3 {
 		text-transform: capitalize;
+		font-family: 'Abel', sans-serif;
 		font-size: 1.1rem;
 		margin-top: 1rem;
 		letter-spacing: $spacing;
@@ -462,7 +481,9 @@ nav {
 	}
 	h4 {
 		margin-top: 0.7rem;
+		font-family: 'Abel', sans-serif;
 		letter-spacing: $spacing;
+		font-size: 120%;
 		color: $main;
 		text-align: center;
 	}
