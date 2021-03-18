@@ -8,7 +8,7 @@
 body {
   background: #F1F1F1;
   margin: 3%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Abel', sans-serif;
   -webkit-transition: .3s ease all;
   transition: .3s ease all;
 }
@@ -48,6 +48,7 @@ h3 {
 }
 
 nav {
+  font-family: 'Abel', sans-serif;
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -78,11 +79,6 @@ body.dark nav a {
 
 body.dark nav a:hover {
   color: white;
-}
-
-nav .logotipo {
-  font-weight: 700;
-  font-family: 'Roboto', sans-serif;
 }
 
 nav .enlaces {
@@ -409,7 +405,8 @@ hr {
 }
 
 .cart-item img {
-  width: 20%;
+  width: 50px;
+  height: 50px;
 }
 
 .cart-item h4 {
@@ -549,6 +546,10 @@ hr {
 
 #mercadopago {
   visibility: hidden;
+}
+
+.container {
+  font-family: 'Abel', sans-serif;
 }
 
 #icon {

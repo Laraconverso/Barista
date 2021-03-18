@@ -52,7 +52,7 @@ $treinta: 30px;
 body {
 	background: #F1F1F1;
 	margin: 3%;
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Abel', sans-serif;
 	transition: .3s ease all;
 	&.dark{
 		background: $negro;
@@ -83,6 +83,7 @@ h3{
 }
 //NAVBAR
 nav {
+	font-family: 'Abel', sans-serif;
 	background: $blanco;
 	display: flex;
 	justify-content: space-between;
@@ -101,10 +102,6 @@ nav {
 			}
 		}
 
-	}
-	.logotipo {
-		font-weight: 700;
-		font-family: 'Roboto', sans-serif;
 	}
 	.enlaces {
 		display: flex;
@@ -369,7 +366,8 @@ hr{
 	grid-column-gap: 1.5rem;
 	margin: 1.5rem 0;
 	img {
-		width: 20%;
+		width: 50px;
+		height: 50px;
 	}
 	h4 {
 		font-size: 0.85rem;
@@ -495,6 +493,9 @@ hr{
 
 }
 //Footer
+.container{
+	font-family: 'Abel', sans-serif;
+}
 #icon{
     margin: 0.5%;
     @include sm(){

@@ -1,16 +1,16 @@
 //Cart & Buttons 
-var carrito = [];
-var botones  = [];
+var cart = [];
+var buttons  = [];
 
 //Variables
 let capsulas = document.querySelector(".products"); //Showing the products in the Page
 let btn = document.querySelector(".btn"); //visualize/open cart button
-let cDOM = document.querySelector(".cart"); //CartDOM (strutcture)
+let DOM = document.querySelector(".cart"); //CartDOM (strutcture)
 let sideBar = document.querySelector(".sideBar"); //SideBar Logic 
 let content = document.querySelector(".content"); // Adding Items and removing them
 let items = document.querySelector(".items"); //Whats in the Cart
 let clearAllBtn = document.querySelector(".clear"); //Remove all the items from the cart button
-let totalCh = document.querySelector(".total"); //Calculating the total checkout
+let total = document.querySelector(".total"); //Calculating the total checkout
 let closeBtn = document.querySelector(".close"); //close/hide cart button
 
 
@@ -44,10 +44,9 @@ class Customer{
   //Add Item Buttons 
   getBagButtons() {
     let buttons = [...$(".bag-btn")];
-    botones  = buttons;
     buttons.forEach(button => {
       let id = button.dataset.id;
-      let inCart = carrito.find(item => item.id === id);
+      let inCart = cart.find(item => item.id === id);
 
       if (inCart) {
         button.innerText = "Agregado";
@@ -59,10 +58,10 @@ class Customer{
         event.target.disabled = true;
         // add to cart
         let cartItem = { ...Storage.getProduct(id), amount: 1 };
-        carrito = [...carrito, cartItem];
-        Storage.saveCart(carrito);
+        cart = [...cart, cartItem];
+        Storage.saveCart(cart);
         // add to DOM
-        this.setCartValues(carrito);
+        this.setCartValues(cart);
         this.addCartItem(cartItem);
         this.showCart();
       });
@@ -70,14 +69,14 @@ class Customer{
   }
 
   //Checkout total
-  setCartValues(carrito) {
+  setCartValues(cart) {
     let tempTotal = 0;
     let itemsTotal = 0;
-    carrito.map(item => {
+    cart.map(item => {
       tempTotal += item.price * item.amount;
       itemsTotal += item.amount;
     });
-    totalCh.innerText = parseFloat(tempTotal.toFixed(1));
+    total.innerText = parseFloat(tempTotal.toFixed(2));
     items.innerText = itemsTotal;
   }
 
@@ -88,15 +87,16 @@ class Customer{
     $(div).addClass("cart-item");
     div.innerHTML = 
     `<img src=${item.image} alt="product">
-      <div>
-        <h4>${item.title}</h4>
-        <h5>$${item.price}</h5>
-      </div>
-      <div>
-        <i class="fas fa-chevron-up" data-id=${item.id}></i>
-        <p class="item-amount">${item.amount}</p>
-        <i class="fas fa-chevron-down" data-id=${item.id}></i>
-      </div>
+    <div>
+      <h4>${item.title}</h4>
+      <h5>$${item.price}</h5>
+      <span class="remove-item" data-id=${item.id}>Eliminar</span>
+    </div>
+    <div>
+      <i class="fas fa-chevron-up" data-id=${item.id}></i>
+      <p class="item-amount">${item.amount}</p>
+      <i class="fas fa-chevron-down" data-id=${item.id}></i>
+    </div>
     `;
     content.appendChild(div);
   }
@@ -105,31 +105,31 @@ class Customer{
   //Cart SideBar
   showCart() {
     $(sideBar).addClass("transparentBcg");
-    $(cDOM).addClass("showCart");
+    $(DOM).addClass("showCart");
   }
 
   //Setting the Cart SideBar
   CART() {
-    carrito = Storage.getCart();
-    this.setCartValues(carrito);
-    this.addItem(carrito);
-    $(btn).click( this.showCart);
+    cart = Storage.getCart();
+    this.setCartValues(cart);
+    this.addItem(cart);
+    $(btn).click(this.showCart);
     $(closeBtn).click(this.closeCart);
   }
 
   //Adding item
-  addItem(carrito) {
-    carrito.forEach(item => this.addCartItem(item));
+  addItem(cart) {
+    cart.forEach(item => this.addCartItem(item));
   }
 
   //Close Cart
   closeCart() {
     $(sideBar).removeClass("transparentBcg");
-    $(cDOM).removeClass("showCart");
+    $(DOM).removeClass("showCart");
   }
 
   //Cart Logic
-  cartLogic() {
+  logica() {
 
     //Clear Cart button 
     $(clearAllBtn).click(() => {
@@ -137,26 +137,40 @@ class Customer{
     });
 
     //Cart Content // Single Item (In Cart) Actions
-    $(content).click( event => { 
-      if (event.target.classList.contains("fa-chevron-up")) { //Adding Single Item
-        let addAmount = event.target;
-        let id = addAmount.dataset.id;
-        let tempItem = carrito.find(item => item.id === id);
-        tempItem.amount = tempItem.amount + 1;
-        
-        
-        Storage.saveCart(carrito); //updating storage 
-        this.setCartValues(carrito);
-        addAmount.nextElementSibling.innerText = tempItem.amount;
-      } else if (event.target.classList.contains("fa-chevron-down")) { //Removing Single Item
-        let lowerAmount = event.target;
-        let id = lowerAmount.dataset.id;
-        let tempItem = carrito.find(item => item.id === id);
-        tempItem.amount = tempItem.amount - 1;
-        if (tempItem.amount > 0) {
+    $(content).click(event => { 
+      if (event.target.classList.contains("remove-item")) {
+        let removeItem = event.target;
+        let id = removeItem.dataset.id;
+        cart = cart.filter(item => item.id !== id);
 
-          Storage.saveCart(carrito);//updating storage 
-          this.setCartValues(carrito);
+        this.setCartValues(cart);
+        Storage.saveCart(cart);
+        content.removeChild(removeItem.parentElement.parentElement);
+        let buttons = [...document.querySelectorAll(".bag-btn")];
+        buttons.forEach(button => {
+          if (parseInt(button.dataset.id) === id) {
+            button.disabled = false;
+            button.innerHTML = `<i class="fas fa-shopping-cart"></i>agregar`;
+          }
+        });
+      }else if (event.target.classList.contains("fa-chevron-up")) { //Adding Single Item
+          let addAmount = event.target;
+          let id = addAmount.dataset.id;
+          let tempItem = cart.find(item => item.id === id);
+          tempItem.amount = tempItem.amount + 1;
+        
+          Storage.saveCart(cart); //updating storage 
+          this.setCartValues(cart);
+          addAmount.nextElementSibling.innerText = tempItem.amount;
+      } else if (event.target.classList.contains("fa-chevron-down")) { //Removing Single Item
+          let lowerAmount = event.target;
+          let id = lowerAmount.dataset.id;
+          let tempItem = cart.find(item => item.id === id);
+          tempItem.amount = tempItem.amount - 1;
+          if (tempItem.amount > 0) {
+
+          Storage.saveCart(cart);//updating storage 
+          this.setCartValues(cart);
           lowerAmount.previousElementSibling.innerText = tempItem.amount;
 
         } else {
@@ -170,7 +184,7 @@ class Customer{
   //Clear Cart
   clearCart() {
     // console.log(this);
-    let items = carrito.map(item => item.id);
+    let items = cart.map(item => item.id);
     items.forEach(id => this.removeItem(id));
     while (content.children.length > 0) {
       content.removeChild(content.children[0]);
@@ -180,15 +194,15 @@ class Customer{
 
   //Removing items
   removeItem(id) {
-    carrito = carrito.filter(item => item.id !== id);
-    this.setCartValues(carrito);
-    Storage.saveCart(carrito);
+    cart = cart.filter(item => item.id !== id);
+    this.setCartValues(cart);
+    Storage.saveCart(cart);
     let button = this.getSingleButton(id);
     button.disabled = false;
     button.innerHTML = `<i class="fas fa-shopping-cart"></i>agregar`;
   }
   getSingleButton(id) {
-    return botones .find(button => button.dataset.id === id);
+    return buttons.find(button => button.dataset.id === id);
   }
 }
 
@@ -244,12 +258,12 @@ class Storage{
         let products = JSON.parse(localStorage.getItem("products"));
         return products.find(product => product.id === id);
     }
-    static saveCart(carrito) {
-        localStorage.setItem("carrito", JSON.stringify(carrito));
+    static saveCart(cart) {
+        localStorage.setItem("cart", JSON.stringify(cart));
     }
     static getCart() {
-        return localStorage.getItem("carrito")
-          ? JSON.parse(localStorage.getItem("carrito"))
+        return localStorage.getItem("cart")
+          ? JSON.parse(localStorage.getItem("cart"))
           : [];
     }
 }
@@ -269,7 +283,7 @@ $(document).ready(() => {
     })
     .then(() => {
       customer.getBagButtons();
-      customer.cartLogic();
+      customer.logica();
     });
 });
 
