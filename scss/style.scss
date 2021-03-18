@@ -428,24 +428,25 @@ hr{
 .bag-btn {
 	background: $main;
 	position: absolute;
-	top: 70%;
-	right: 0;
+	font-family:'Montserrat', sans-serif;
+	font-size: 80%;
+	top: 50%;
+	left: 50%;
 	border: none;
 	text-transform: uppercase;
-	padding: 0.5rem 0.75rem;
+	padding: 0.5% 7%;
 	letter-spacing: $spacing;
 	font-weight: bold;
 	transition: $mainTransition;
-	transform: translateY(150%);
-	margin-left: auto;
-	margin-right: 23%;
-	@include sm(){
-		margin-right: 40%
-	};
-	@include md(){
-		margin-right: 35%;
-	}
-	cursor: pointer;
+	transform: translateY(450%);
+	margin-top: 0%;
+	//@include sm(){
+	//	margin-right: 30%
+	//};
+	//@include md(){
+	//	margin-right: 35%;
+	//}
+	//cursor: pointer;
 	&:hover {
 		color: $blanco;
 	}
@@ -475,14 +476,14 @@ hr{
 		text-transform: capitalize;
 		font-family: 'Abel', sans-serif;
 		font-size: 1.1rem;
-		margin-top: 1rem;
+		margin-top: -3%;
 		letter-spacing: $spacing;
 		text-align: center;
 	}
 	h4 {
-		margin-top: 0.7rem;
 		font-family: 'Abel', sans-serif;
 		letter-spacing: $spacing;
+		margin-top: -3%;
 		font-size: 120%;
 		color: $main;
 		text-align: center;

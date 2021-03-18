@@ -347,24 +347,18 @@ hr {
 .bag-btn {
   background: #e48202;
   position: absolute;
-  top: 70%;
-  right: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 80%;
+  top: 50%;
+  left: 50%;
   border: none;
   text-transform: uppercase;
-  padding: 0.5rem 0.75rem;
+  padding: 0.5% 7%;
   letter-spacing: 0.1rem;
   font-weight: bold;
   transition: all 0.3s linear;
-  transform: translateY(150%);
-  margin-left: auto;
-  margin-right: 23%;
-  cursor: pointer; }
-  @media (max-width: 430px) {
-    .bag-btn {
-      margin-right: 40%; } }
-  @media (min-width: 430px) and (max-width: 780px) {
-    .bag-btn {
-      margin-right: 35%; } }
+  transform: translateY(450%);
+  margin-top: 0%; }
   .bag-btn:hover {
     color: white; }
 
@@ -391,14 +385,14 @@ hr {
   text-transform: capitalize;
   font-family: 'Abel', sans-serif;
   font-size: 1.1rem;
-  margin-top: 1rem;
+  margin-top: -3%;
   letter-spacing: 0.1rem;
   text-align: center; }
 
 .product h4 {
-  margin-top: 0.7rem;
   font-family: 'Abel', sans-serif;
   letter-spacing: 0.1rem;
+  margin-top: -3%;
   font-size: 120%;
   color: #e48202;
   text-align: center; }
