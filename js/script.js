@@ -1,6 +1,6 @@
-//Cart & Buttons 
+//DeclareCart & Buttons 
 var cart = [];
-var buttons  = [];
+var botones  = [];
 
 //Variables
 let capsulas = document.querySelector(".products"); //Showing the products in the Page
@@ -28,8 +28,7 @@ class Customer{
               <div class="photo">
                   <img src=${product.image} alt="product" class="product-img"/>
                   <button class="bag-btn" data-id=${product.id}>
-                      <i class="fas fa-shopping-cart"></i>
-                      agregar
+                      <i class="fas fa-shopping-cart"></i> agregar
                   </button>
               </div>
               <hr>
@@ -44,15 +43,17 @@ class Customer{
   //Add Item Buttons 
   getBagButtons() {
     let buttons = [...$(".bag-btn")];
+    botones = buttons;
     buttons.forEach(button => {
       let id = button.dataset.id;
+
       let inCart = cart.find(item => item.id === id);
 
       if (inCart) {
         button.innerText = "Agregado";
         button.disabled = true;
       }
-      $(button).click(event => {
+      $(button).on("click", event => {
         // disable button
         event.target.innerText = "Agregado";
         event.target.disabled = true;
@@ -131,48 +132,40 @@ class Customer{
   //Cart Logic
   logica() {
 
-    //Clear Cart button 
+    //clear cart button  
     $(clearAllBtn).click(() => {
       this.clearCart();
     });
 
-    //Cart Content // Single Item (In Cart) Actions
-    $(content).click(event => { 
+    //Cart Content and Single Items (in Cart) Action 
+    $(content).click( event => {
       if (event.target.classList.contains("remove-item")) {
         let removeItem = event.target;
         let id = removeItem.dataset.id;
-        cart = cart.filter(item => item.id !== id);
-
-        this.setCartValues(cart);
-        Storage.saveCart(cart);
         content.removeChild(removeItem.parentElement.parentElement);
-        let buttons = [...document.querySelectorAll(".bag-btn")];
-        buttons.forEach(button => {
-          if (parseInt(button.dataset.id) === id) {
-            button.disabled = false;
-            button.innerHTML = `<i class="fas fa-shopping-cart"></i>agregar`;
-          }
-        });
-      }else if (event.target.classList.contains("fa-chevron-up")) { //Adding Single Item
-          let addAmount = event.target;
-          let id = addAmount.dataset.id;
-          let tempItem = cart.find(item => item.id === id);
-          tempItem.amount = tempItem.amount + 1;
+        // remove item
+        this.removeItem(id);
+      } else if (event.target.classList.contains("fa-chevron-up")) { //Adding Single Item
+        let addAmount = event.target;
+        let id = addAmount.dataset.id;
+        let tempItem = cart.find(item => item.id === id);
+        tempItem.amount = tempItem.amount + 1;
         
-          Storage.saveCart(cart); //updating storage 
-          this.setCartValues(cart);
-          addAmount.nextElementSibling.innerText = tempItem.amount;
+        //updating storage
+        Storage.saveCart(cart);
+        this.setCartValues(cart);
+        addAmount.nextElementSibling.innerText = tempItem.amount;
       } else if (event.target.classList.contains("fa-chevron-down")) { //Removing Single Item
-          let lowerAmount = event.target;
-          let id = lowerAmount.dataset.id;
-          let tempItem = cart.find(item => item.id === id);
-          tempItem.amount = tempItem.amount - 1;
-          if (tempItem.amount > 0) {
+        let lowerAmount = event.target;
+        let id = lowerAmount.dataset.id;
+        let tempItem = cart.find(item => item.id === id);
+        tempItem.amount = tempItem.amount - 1;
+        if (tempItem.amount > 0) {
 
-          Storage.saveCart(cart);//updating storage 
+            //updating storage
+          Storage.saveCart(cart);
           this.setCartValues(cart);
           lowerAmount.previousElementSibling.innerText = tempItem.amount;
-
         } else {
           content.removeChild(lowerAmount.parentElement.parentElement);
           this.removeItem(id);
@@ -184,8 +177,8 @@ class Customer{
   //Clear Cart
   clearCart() {
     // console.log(this);
-    let items = cart.map(item => item.id);
-    items.forEach(id => this.removeItem(id));
+    let cartItems = cart.map(item => item.id);
+    cartItems.forEach(id => this.removeItem(id));
     while (content.children.length > 0) {
       content.removeChild(content.children[0]);
     }
