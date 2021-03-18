@@ -181,6 +181,10 @@ nav .btn {
   }
 }
 
+.np {
+  margin-top: 5%;
+}
+
 /*.grid {
 	display: grid;
 	grid-gap: 40px 20px;
@@ -542,6 +546,10 @@ hr {
   font-size: 120%;
   color: #e48202;
   text-align: center;
+}
+
+#formu {
+  visibility: hidden;
 }
 
 #mercadopago {

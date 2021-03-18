@@ -54,6 +54,8 @@
              <!--PRESENTATION-->
             <div id="main">
                 <img src="img/wallpaper.png" id="portada">
+                <br>
+                <h4 id="inf" class="np">Nuestros Productos</h4>
             </div>
              <!--PRODUCTS-->
             <div class="products">
@@ -102,8 +104,14 @@
                         </div>
                         <div class="cart-footer">
                             <h3>TOTAL: $<span class="total">0</span></h3>
-                            <button class="clear banner-btn" id="vaciar">Vaciar carrito</button>
-                            <button type="button" class="finalizar" onclick="end()" id="end">Finalizar Compra</button>
+                            <button class="clear banner-btn" id="vaciar"> Vaciar carrito </button>
+                            <button type="button" class="finalizar" onclick="end()" id="end"> Finalizar Compra</button>
+                            <form id="formu">
+                                <label for="fname">Nombre:</label><br>
+                                <input type="text" id="fname" name="fname" value="John"><br>
+                                <label for="lname">Apellido:</label><br>
+                                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                            </form>
                             <button id="mercadoPago"><script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id='<%= global.id %>'></script></button>
                         </div>
                     </div>  
@@ -143,7 +151,7 @@
                 </div>
             </div>
         </footer>
-        <script src="js/prueba.js"></script>
+        <script src="js/script.js"></script>
         <script src="js/switch.js"></script>
     </body>
 </html> 
