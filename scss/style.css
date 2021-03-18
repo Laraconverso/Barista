@@ -549,11 +549,11 @@ hr {
 }
 
 #formu {
-  visibility: hidden;
+  margin: 5%;
 }
 
 #mercadopago {
-  visibility: hidden;
+  margin: 5%;
 }
 
 .container {

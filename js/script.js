@@ -206,6 +206,7 @@ $(document).ready(function() {
     $('#mercadoPago').hide();
     $('#formu').hide();
             $('#end').click(function(){
+                $('.content').hide();
                 $('#end').hide();
                 $('#vaciar').hide();
                 $('#formu').show();
