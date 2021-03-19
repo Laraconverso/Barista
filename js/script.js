@@ -203,7 +203,7 @@ class Customer {
     }
 }
 
-//Mercado Pago button  
+//In cart actions (buttons) 
 $(document).ready(function() {
     $('#mercadoPago').hide();
     $('#formu').hide();
@@ -215,7 +215,7 @@ $(document).ready(function() {
         $('#end').hide();
         $('#mercadopago').hide();
         $('#vaciar').hide();
-        $('.close').hide();
+        $('.keepB').hide();
         $('#formu').show();
         $('#question').show();
         $('#cancelar').show();
@@ -225,7 +225,7 @@ $(document).ready(function() {
         $('#mercadopago').hide();
         $('#question').hide();
         $('#cancelar').hide();
-        $('.close').show();
+        $('.keepB').show();
         $('.content').show();
         $('#end').show();
         $('#vaciar').show();
@@ -233,7 +233,7 @@ $(document).ready(function() {
       $('#question').click(function(){
         $('#formu').hide();
         $('#question').hide();
-        $('.close').hide();
+        $('.keepB').hide();
         $('.content').hide();
         $('#end').hide();
         $('#vaciar').hide();
