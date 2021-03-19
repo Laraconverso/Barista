@@ -1,4 +1,4 @@
- # Barista  <img src="https://raw.githubusercontent.com/Laraconverso/Barista/main/img/favicon.ico" width="30"/>
+ # Barista  <img src="https://github.com/Laraconverso/Barista/blob/main/img/logomorarron.png" width="30"/>
 Proyecto Final para el curso de JavaScript dictado por Coder House 
 
  ## ¿Que es Barista? ☕️

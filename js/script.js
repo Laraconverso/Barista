@@ -11,7 +11,8 @@ let content = document.querySelector(".content"); // Adding Items and removing t
 let items = document.querySelector(".items");//Whats in the Cart
 let clearAllBtn = document.querySelector(".clear");//Remove all the items from the cart button
 let total = document.querySelector(".total");//Calculating the total checkout
-let closeBtn = document.querySelector(".close");//close/hide cart button
+let closeBtn = document.querySelector(".close");//Close/hide cart button
+let keepB = document.querySelector(".keepB"); //Keep buying button
 
 
 //Setting up the Customer view
@@ -114,6 +115,7 @@ class Customer {
       this.addItem(cart);
       $(btn).on("click", this.showCart);
       $(closeBtn).click(this.closeCart);
+      $(keepB).click(this.closeCart);
     }
 
     //Adding item

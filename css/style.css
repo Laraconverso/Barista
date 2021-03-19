@@ -262,7 +262,7 @@ hr {
     width: 30vw;
     min-width: 450px; } }
 
-.close {
+.keepB {
   padding: 1%;
   border: 1px solid black;
   align-items: center;
@@ -273,24 +273,28 @@ hr {
   color: black;
   transition: all 0.3s linear;
   cursor: pointer; }
-  .close a {
+  .keepB a {
     color: black; }
-  .close:hover {
+  .keepB:hover {
     background: black;
     color: white; }
-    .close:hover a {
+    .keepB:hover a {
       color: white; }
-  .dark .close {
+  .dark .keepB {
     color: white;
     background: transparent;
     border: 1px solid white; }
-    .dark .close a {
+    .dark .keepB a {
       color: white; }
-    .dark .close:hover {
+    .dark .keepB:hover {
       background: white;
       color: black; }
-      .dark .close:hover a {
+      .dark .keepB:hover a {
         color: black; }
+
+.close {
+  font-size: 1.7rem;
+  cursor: pointer; }
 
 .cart h2 {
   text-transform: capitalize;

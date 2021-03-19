@@ -412,6 +412,11 @@ hr {
   color: black;
 }
 
+.close {
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+
 .cart h2 {
   text-transform: capitalize;
   text-align: center;
