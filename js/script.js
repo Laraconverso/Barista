@@ -205,13 +205,39 @@ class Customer {
 $(document).ready(function() {
     $('#mercadoPago').hide();
     $('#formu').hide();
-            $('#end').click(function(){
-                $('.content').hide();
-                $('#end').hide();
-                $('#vaciar').hide();
-                $('#formu').show();
-                $('#mercadoPago').show();
-            });
+    $('#cancelar').hide();
+    $('#question').hide();
+    $('#mercadopago').hide();
+      $('#end').click(function(){
+        $('.content').hide();
+        $('#end').hide();
+        $('#mercadopago').hide();
+        $('#vaciar').hide();
+        $('.close').hide();
+        $('#formu').show();
+        $('#question').show();
+        $('#cancelar').show();
+          });
+      $('#cancelar').click(function(){
+        $('#formu').hide();
+        $('#mercadopago').hide();
+        $('#question').hide();
+        $('#cancelar').hide();
+        $('.close').show();
+        $('.content').show();
+        $('#end').show();
+        $('#vaciar').show();
+          });
+      $('#question').click(function(){
+        $('#formu').hide();
+        $('#question').hide();
+        $('.close').hide();
+        $('.content').hide();
+        $('#end').hide();
+        $('#vaciar').hide();
+        $('#cancelar').show();
+        $('#mercadopago').show();
+        });
 });
 
 /* PRUEBA

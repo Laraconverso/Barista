@@ -12,6 +12,7 @@ $verde: #18b40a;
 $verdeHover: #5ae239;
 $red: rgb(129, 6, 6);
 $redHover:rgb(241, 12, 12);
+$mp:rgb(72, 179, 214);
 $mainTransition: all 0.3s linear;
 $spacing: 0.1rem;
 //Sombras
@@ -246,21 +247,7 @@ nav {
 		background: $verdeHover;
 	}
 }
-.buttonCancel{
-	background-color: $red;
-	margin: 10%;
-	padding: 10px;
-	color: #fff;
-	width: 75%;
-	display: grid;
-	grid-template-columns: 1fr;
-	text-align: center;
-	border-radius: 20px;
-	transition: .3s ease all;
-	&:hover {
-		background: $redHover;
-	}
-}
+
 #productPic{
 	@include sm(){
 		width:  100%;
@@ -353,14 +340,47 @@ hr{
   }
 }
 .close {
-  font-size: 1.7rem;
-  cursor: pointer;
+	padding: 1%;
+	border: 1px solid $negro;
+	align-items: center;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+	background: transparent;
+	color: $negro;
+	transition: $mainTransition;
+	cursor: pointer;
+	a{
+		color: $negro;
+	}
+	&:hover {
+		background: $negro;
+		color: $blanco;
+		a{
+			color: $blanco;
+		}
+	}
+	.dark &{ 
+		color: $blanco;
+		background: transparent;
+		border: 1px solid $blanco;
+		a{
+			color: $blanco;
+		}
+		&:hover {
+			background: $blanco;
+			color: $negro;
+			a{
+				color: $negro;
+			}
+		}	
+	}
 }
 .cart h2 {
-  text-transform: capitalize;
-  text-align: center;
-  letter-spacing: $spacing;
-  margin-bottom: 2rem;
+  	text-transform: capitalize;
+  	text-align: center;
+  	letter-spacing: $spacing;
+  	margin-bottom: 2rem;
 }
 .cart-item {
 	display: grid;
@@ -406,7 +426,7 @@ hr{
 .products {
 	padding: 4rem 0;
 }
-.section-title h2 {
+#section-title h2 {
 	text-align: center;
 	font-size: 2.5rem;
 	margin-bottom: 5rem;
@@ -491,13 +511,104 @@ hr{
 	}
 }
 
+
+
 #formu{
 	margin: 5%;
+	display: inline-grid;
+	align-items: center;
+	grid-column-start: 1;
+	grid-column-end: 1;
+	column-gap: 3%;
+	row-gap: 3%;
+	margin-bottom: 15%;
 }
 
-#mercadopago {
-	//visibility: hidden;
-	margin: 5%;
+#question {
+	margin-top: 5%;
+	padding: 2%;
+	text-transform: uppercase;
+	font-size: 90%;
+	//letter-spacing: $spacing;
+	background: $mp;
+	color: $negro;
+	border: 0.5px solid $mp;
+	transition: $mainTransition;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		color: $mp;
+		z-index: -2;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: darken($mp, 15%);
+		transition: all .3s;
+		z-index: -1;
+	}
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+	}
+}
+
+#cancelar{
+	margin-top: 5%;
+	padding: 2%;
+	font-size: 90%;
+	//letter-spacing: $spacing;
+	background: $redHover;
+	color: $negro;
+	border: 0.5px solid $redHover;
+	transition:$mainTransition;
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	overflow: hidden;
+	z-index: 1;
+	&:after {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: transparent;
+		color: $redHover;
+		z-index: -2;
+	}
+	&:before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 0%;
+		height: 100%;
+		background-color: darken($redHover, 15%);
+		transition: all .3s;
+		z-index: -1;
+	}
+	&:hover {
+		&:before {
+			width: 100%;
+		}
+	}
 }
 
 //Footer

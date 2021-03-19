@@ -58,8 +58,8 @@
                 <h4 id="inf" class="np">Nuestros Productos</h4>
             </div>
              <!--PRODUCTS-->
-            <div class="products">
-                <div class="section-title">
+            <div class="products" id="productos">
+                <div id="section-title">
                     <h4 id="inf">Nuestros Productos</h4>
                 </div>
                 <div class="product" id="inf"> 
@@ -81,7 +81,6 @@
              <!--SHOPPING CART-->
             <div class="sideBar">
                 <div class="cart">
-                    <span class="close"><i class="far fa-window-close"></i></span>
                     <h2>Tu Pedido</h2>
                     <div class="content">
                          <!--
@@ -102,25 +101,49 @@
                         </div>
                         -->
                         </div>
+                        <button class="close"> <a href="#productos" >Continuar Comprando</a> </button>
                         <div class="cart-footer">
                             <h3>TOTAL: $<span class="total">0</span></h3>
                             <button class="clear banner-btn" id="vaciar"> Vaciar carrito </button>
-                            <button type="button" class="finalizar" onclick="end()" id="end"> Finalizar Compra</button>
+                            <button type="button" class="finalizar" onclick="end()" id="end">Finalizar Compra</button>
                             <form id="formu" >
-                                <label for="fname">Nombre:</label><br>
-                                <input type="text" id="fname" name="fname"><br>
-                                <label for="lname">Apellido:</label><br>
-                                <input type="text" id="lname" name="lname"><br><br>
-                                <label for="fname">Email:</label><br>
-                                <input type="email" id="fname" name="fname"><br>
-                                <label for="fname">Dirección:</label><br>
-                                <input type="text" id="fname" name="fname"><br>
-                                <label for="fname">Altura:</label><br>
-                                <input type="number" id="fname" name="fname"><br>
-                                <label for="fname">Numero de tarjeta:</label><br>
-                                <input type="number" id="fname" name="fname"><br>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="fname">Nombre:</label><br>
+                                        <input type="text" id="fname" name="fname"><br>
+                                    </div>
+                                    <div class="col">
+                                        <label for="lname">Apellido:</label><br>
+                                        <input type="text" id="lname" name="lname"><br><br> 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <label for="fname">Calle:</label><br>
+                                        <input type="text" id="fname" name="fname"><br>
+                                    </div>
+                                    <div class="col">
+                                        <label for="fname">Altura:</label><br>
+                                        <input type="number" id="fname" name="fname"><br>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <label for="fname">Email:</label><br>
+                                    <input type="email" id="fname" name="fname"><br>
+                                </div>
+                                <div class="row"> 
+                                    <label for="fname">Numero de tarjeta:</label><br>
+                                    <input type="number" id="fname" name="fname"><br>
+                                </div>
                             </form>
-                            <button id="mercadoPago"><script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id='<%= global.id %>'></script></button>
+                            <button id="question" > ¿Pagar con mercado pago? </button>
+                            <div id="mercadopago">
+                                <p> Haz click aquí 👇</p>
+                                <script src="https://www.mercadopago.com.ar/integrations/v1/web-payment-checkout.js" data-preference-id='<%= global.id %>' ></script>
+                            </div>
+                            
+                            <br>
+                            <button id="cancelar">Cancelar</button>
                         </div>
                     </div>  
                 </div>
