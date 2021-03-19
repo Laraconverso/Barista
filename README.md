@@ -8,6 +8,7 @@ Por el otro lado cuenta con un Carrito emergente desde la derecha en el cual se 
 
 ## Herramientas 🛠
 
+* [HTML/SCSS](https://sass-lang.com/)
 * [JavaScript](https://www.javascript.com/) 
 * [JQuery](https://jquery.com) 
 * [Sass](https://sass-lang.com/)
