@@ -5,8 +5,7 @@
       "fields": {
         "title": "Vainilla Blend",
         "price": 1100,
-        "image": { "fields": { "file": { "url": "img/11.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/11.png" } } }
       }
     },
     {
@@ -14,8 +13,7 @@
       "fields": {
         "title": "Shangai Blend",
         "price": 1050,
-        "image": { "fields": { "file": { "url": "img/shangai.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/shangai.png" } } }
       }
     },
     {
@@ -23,8 +21,7 @@
       "fields": {
         "title": "Budapest Blend",
         "price": 900,
-        "image": { "fields": { "file": { "url": "img/budapest.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/budapest.png" } } }
       }
     },
     {
@@ -32,8 +29,7 @@
       "fields": {
         "title": "Colombia Blend",
         "price": 1080,
-        "image": { "fields": { "file": { "url": "img/colombia.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/colombia.png" } } }
       }
     },
     {
@@ -41,8 +37,7 @@
       "fields": {
         "title": "Chocolate Blend",
         "price": 987,
-        "image": { "fields": { "file": { "url": "img/chocolate.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/chocolate.png" } } }
       }
     },
     {
@@ -50,8 +45,7 @@
       "fields": {
         "title": "Ethiopia Blend",
         "price": 1000,
-        "image": { "fields": { "file": { "url": "img/10.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/10.png" } } }
       }
     },
     {
@@ -59,8 +53,7 @@
       "fields": {
         "title": "Capetown Blend",
         "price": 1030,
-        "image": { "fields": { "file": { "url": "img/9.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/9.png" } } }
       }
     },
     {
@@ -68,8 +61,7 @@
       "fields": {
         "title": "Moscow Blend",
         "price": 1000,
-        "image": { "fields": { "file": { "url": "img/moscow.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/moscow.png" } } }
       }
     },
     {
@@ -77,8 +69,7 @@
       "fields": {
         "title": "Caramel Blend",
         "price": 1000,
-        "image": { "fields": { "file": { "url": "img/caramel.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/caramel.png" } } }
       }
     },
     {
@@ -86,8 +77,7 @@
       "fields": {
         "title": "Oslo Blend",
         "price": 1000,
-        "image": { "fields": { "file": { "url": "img/oslo.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/oslo.png" } } }
       }
     },
     {
@@ -95,8 +85,7 @@
       "fields": {
         "title": "Vancouver Blend",
         "price": 1000,
-        "image": { "fields": { "file": { "url": "img/vancouver.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/vancouver.png" } } }
       }
     },
     {
@@ -104,8 +93,7 @@
       "fields": {
         "title": "Buenos Aires Blend",
         "price": 1000,
-        "image": { "fields": { "file": { "url": "img/12.png" } } },
-        "more": "Es un café elaborado sobre la base del Grand Cru, Livanto un blend de Arábicas de América del Sur y Central, que presentan un bouquet redondo y muy equilibrado. Los ricos y aterciopelados aromas de la vainilla se expresan sutilmente en una textura suave y sedosa. Un blend que se distingue por su sabor infinitamente suave y sedoso en el paladar."
+        "image": { "fields": { "file": { "url": "img/12.png" } } }
       }
     }
   ]
