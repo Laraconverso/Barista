@@ -14,3 +14,8 @@ Al final del carrito tiene otros botones, por un lado el de "finalizar compra", 
 * [JQuery](https://jquery.com) 
 * [Sass](https://sass-lang.com/)
 * [FontAwsome](https://fontawesome.com/) 
+* [Adobe Illustrator (logo y capsulas 3D)] (https://www.adobe.com/la/products/illustrator.html?sdid=KQPQJ&mv=search&ef_id=CjwKCAiAvOeQBhBkEiwAxutUVBkOPZRkhHLB8m78nPU88fjnzVQLmeOz7gTCOMKIQ4BE3AIzmu8QVRoCZRkQAvD_BwE:G:s&s_kwcid=AL!3085!3!459875986506!e!!g!!illustrator!630551026!10721864982&gclid=CjwKCAiAvOeQBhBkEiwAxutUVBkOPZRkhHLB8m78nPU88fjnzVQLmeOz7gTCOMKIQ4BE3AIzmu8QVRoCZRkQAvD_BwE)
+
+[Autora del Proyecto: Lara Converso]
+
+Para Actualizar: Hacer el diseño responsive.
